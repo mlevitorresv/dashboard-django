@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <title>Hotel Miranda</title>
 </head>
@@ -13,8 +14,8 @@
     <header class="header">
         <div class="header__all">
             <div class="header__all--left">
-                <img src="./media/burgerIcon.png" alt="menu icon" class="header__all--left--burger" id="burgerIcon" />
-                <img src="./media/crossBurger.png" alt="cross icon" class="header__all--left--cross"
+                <img src="{% static 'media/burgerIcon.png' %}" alt="menu icon" class="header__all--left--burger" id="burgerIcon" />
+                <img src="{% static 'media/crossBurger.png' %}" alt="cross icon" class="header__all--left--cross"
                     id="crossBurgerIcon" />
                 <a href="./index.html" class="header__all--left--logo">
                     <h1 class="header__all--left--logo--H">H</h1>
@@ -40,8 +41,8 @@
             </div>
 
             <div class="header__all--right">
-                <img src="./media/personIcon.png" alt="person icon" class="header__all--right--person" />
-                <img src="./media/lensIcon.png" alt="lens icon" class="header__all--right--lens" />
+                <img src="{% static 'media/personIcon.png' %}" alt="person icon" class="header__all--right--person" />
+                <img src="{% static 'media/lensIcon.png' %}" alt="lens icon" class="header__all--right--lens" />
             </div>
         </div>
     </header>
@@ -84,22 +85,22 @@
                 </p>
                 <button class="main__about--underground--bt-book" onclick="location.href='./rooms.html'">BOOK NOW</button>
             </div>
-            <img src="./media/hotelUnderground.jpg" alt="Hotel terrace"
+            <img src="{% static 'media/hotelUnderground.jpg' %}" alt="Hotel terrace"
                 class="main__about--img main__about--img--terrace">
             <div class="main__about--team">
                 <div class="main__about--team--strong">
-                    <img src="./media/strongTeamGrey.png" alt="people group" class="main__about--team--strong--back" />
-                    <img src="./media/strongTeam.png" alt="people group" class="main__about--team--strong--front" />
+                    <img src="{% static 'media/strongTeamGrey.png' %}" alt="people group" class="main__about--team--strong--back" />
+                    <img src="{% static 'media/strongTeam.png' %}" alt="people group" class="main__about--team--strong--front" />
                     <h3 class="main__about--team--strong--title">Strong Team</h3>
                     <p class="main__about--team--strong--desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                         sed do eiusmod tempor.</p>
-                    <img src="./media/hotelTeam.jpg" alt="hotel coworkers" class="main__about--team--strong--team">
+                    <img src="{% static 'media/hotelTeam.jpg' %}" alt="hotel coworkers" class="main__about--team--strong--team">
                 </div>
             </div>
             <div class="main__about--luxury">
-                <img src="./media/suite.jpg" alt="suite room" class="main__about--luxury--img" />
+                <img src="{% static 'media/suite.jpg' %}" alt="suite room" class="main__about--luxury--img" />
                 <div class="main__about--luxury--desc">
-                    <img src="./media/calendarSuite.png" alt="Calendar icon" class="main__about--luxury--desc--icon" />
+                    <img src="{% static 'media/calendarSuite.png' %}" alt="Calendar icon" class="main__about--luxury--desc--icon" />
                     <h3 class="main__about--luxury--desc--title">Luxury Room</h3>
                     <p class="main__about--luxury--desc--text">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                         sed do eiusmod tempor.</p>
@@ -109,25 +110,25 @@
                 <p class="main__about--rooms--info">ROOMS</p>
                 <h3 class="main__about--rooms--title">Hand Picked Rooms</h3>
                 <div class="main__about--rooms--icons">
-                    <img src="./media/iconBed.png" alt="a bed icon" />
-                    <img src="./media/iconWifi.png" alt="a wifi icon" />
-                    <img src="./media/iconCar.png" alt="a car icon" />
-                    <img src="./media/iconCold.png" alt="a cold icon" />
-                    <img src="./media/iconGym.png" alt="a gym icon" />
-                    <img src="./media/iconNoSmoke.png" alt="a no smoke icon" />
-                    <img src="./media/iconCocktail.png" alt="a cocktail icon" />
+                    <img src="{% static 'media/iconBed.png' %}" alt="a bed icon" />
+                    <img src="{% static 'media/iconWifi.png' %}" alt="a wifi icon" />
+                    <img src="{% static 'media/iconCar.png' %}" alt="a car icon" />
+                    <img src="{% static 'media/iconCold.png' %}" alt="a cold icon" />
+                    <img src="{% static 'media/iconGym.png' %}" alt="a gym icon" />
+                    <img src="{% static 'media/iconNoSmoke.png' %}" alt="a no smoke icon" />
+                    <img src="{% static 'media/iconCocktail.png' %}" alt="a cocktail icon" />
                 </div>
                 <div class="main__about--rooms">
                     <div class="swiper main__slider--swiper">
                         <!-- Additional required wrapper -->
                         <div class="swiper-wrapper main__slider--swiper--wrapper">
                             <!-- Slides -->
-                            <div class="swiper-slide main__slider--swiper--wrapper--slide"><img src="./media/gym.jpg"
+                            <div class="swiper-slide main__slider--swiper--wrapper--slide"><img src="{% static 'media/gym.jpg' %}"
                                     alt="gym of hotel" class="slide main__slider--swiper--wrapper--slide--img" /></div>
                             <div class="swiper-slide main__slider--swiper--wrapper--slide"><img
-                                    src="./media/restaurant.jpg" alt="restaurant of hotel"
+                                    src="{% static 'media/restaurant.jpg' %}" alt="restaurant of hotel"
                                     class="slide main__slider--swiper--wrapper--slide--img" /></div>
-                            <div class="swiper-slide main__slider--swiper--wrapper--slide"><img src="./media/room.jpg"
+                            <div class="swiper-slide main__slider--swiper--wrapper--slide"><img src="{% static 'media/room.jpg' %}"
                                     alt="room of hotel" class="slide main__slider--swiper--wrapper--slide--img" /></div>
                         </div>
 
@@ -167,7 +168,7 @@
                     <!-- Slides -->
                     <div class="swiper-slide main__facilities--rating">
                         <p class="main__facilities--rating--num">01</p>
-                        <img src="./media/iconRating.png" alt="icon rating" class="main__facilities--rating--icon">
+                        <img src="{% static 'media/iconRating.png' %}" alt="icon rating" class="main__facilities--rating--icon">
                         <h4 class="main__facilities--rating--subtitle">Have High Rating</h4>
                         <p class="main__facilities--rating--desc">Lorem ipsum dolor sit amet, consectetur adipisicing
                             elit, sed do eiusmod tempor incididunt ut labore et dolore magna..</p>
@@ -175,7 +176,7 @@
 
                     <div class="swiper-slide main__facilities--rating">
                         <p class="main__facilities--rating--num">02</p>
-                        <img src="./media/clock.png" alt="clock icon" class="main__facilities--rating--icon">
+                        <img src="{% static 'media/clock.png' %}" alt="clock icon" class="main__facilities--rating--icon">
                         <h4 class="main__facilities--rating--subtitle">Quiet Hours</h4>
                         <p class="main__facilities--rating--desc">Lorem ipsum dolor sit amet, consectetur adipisicing
                             elit, sed do eiusmod tempor incididunt ut labore et dolore magna..</p>
@@ -183,7 +184,7 @@
 
                     <div class="swiper-slide main__facilities--rating">
                         <p class="main__facilities--rating--num">03</p>
-                        <img src="./media/location.png" alt="location icon" class="main__facilities--rating--icon">
+                        <img src="{% static 'media/location.png' %}" alt="location icon" class="main__facilities--rating--icon">
                         <h4 class="main__facilities--rating--subtitle">Best Location</h4>
                         <p class="main__facilities--rating--desc">Lorem ipsum dolor sit amet, consectetur adipisicing
                             elit, sed do eiusmod tempor incididunt ut labore et dolore magna..</p>
@@ -191,7 +192,7 @@
 
                     <div class="swiper-slide main__facilities--rating">
                         <p class="main__facilities--rating--num">04</p>
-                        <img src="./media/clockCross.png" alt="clock with cross icon"
+                        <img src="{% static 'media/clockCross.png' %}" alt="clock with cross icon"
                             class="main__facilities--rating--icon">
                         <h4 class="main__facilities--rating--subtitle">Free Cancellation</h4>
                         <p class="main__facilities--rating--desc">Lorem ipsum dolor sit amet, consectetur adipisicing
@@ -200,7 +201,7 @@
 
                     <div class="swiper-slide main__facilities--rating">
                         <p class="main__facilities--rating--num">05</p>
-                        <img src="./media/payment.png" alt="payment icon" class="main__facilities--rating--icon">
+                        <img src="{% static 'media/payment.png' %}" alt="payment icon" class="main__facilities--rating--icon">
                         <h4 class="main__facilities--rating--subtitle">Payment Options</h4>
                         <p class="main__facilities--rating--desc">Lorem ipsum dolor sit amet, consectetur adipisicing
                             elit, sed do eiusmod tempor incididunt ut labore et dolore magna..</p>
@@ -208,7 +209,7 @@
 
                     <div class="swiper-slide main__facilities--rating">
                         <p class="main__facilities--rating--num">06</p>
-                        <img src="./media/certificate.png" alt="certificate icon"
+                        <img src="{% static 'media/certificate.png' %}" alt="certificate icon"
                             class="main__facilities--rating--icon">
                         <h4 class="main__facilities--rating--subtitle">Special Offers</h4>
                         <p class="main__facilities--rating--desc">Lorem ipsum dolor sit amet, consectetur adipisicing
@@ -222,7 +223,7 @@
         </div>
         </div>
         <div class="main__menu">
-            <img src="./media/iconDonut.png" alt="donut icon" class="main__menu--donut">
+            <img src="{% static 'media/iconDonut.png' %}" alt="donut icon" class="main__menu--donut">
             <p class="main__menu--info">MENU</p>
             <h1 class="main__menu--title">Our Foods Menu</h1>
 
@@ -232,7 +233,7 @@
                     <!-- Slides -->
                     <div class="swiper-slide main__menu--swiper--wrapper--slide">
                         <div class="main__menu--swiper--wrapper--slide--food">
-                            <img src="./media/eggs.jpg" alt="eggs and bacon"
+                            <img src="{% static 'media/eggs.jpg' %}" alt="eggs and bacon"
                                 class="main__menu--swiper--wrapper--slide--food--img">
                             <div class="main__menu--food--text">
                                 <h4 class="main__menu--food--text--title">Eggs & Bacon</h4>
@@ -241,7 +242,7 @@
                             </div>
                         </div>
                         <div class="main__menu--swiper--wrapper--slide--food">
-                            <img src="./media/coffe.jpg" alt="coffe and tea"
+                            <img src="{% static 'media/coffe.jpg' %}" alt="coffe and tea"
                                 class="main__menu--swiper--wrapper--slide--food--img">
                             <div class="main__menu--food--text">
                                 <h4 class="main__menu--food--text--title">Tea or Coffee</h4>
@@ -250,7 +251,7 @@
                             </div>
                         </div>
                         <div class="main__menu--swiper--wrapper--slide--food">
-                            <img src="./media/chia.jpg" alt="chia breakfast"
+                            <img src="{% static 'media/chia.jpg' %}" alt="chia breakfast"
                                 class="main__menu--swiper--wrapper--slide--food--img">
                             <div class="main__menu--food--text">
                                 <h4 class="main__menu--food--text--title">Chia Oatmeal</h4>
@@ -261,7 +262,7 @@
                     </div>
                     <div class="swiper-slide main__menu--swiper--wrapper--slide">
                         <div class="main__menu--swiper--wrapper--slide--food">
-                            <img src="./media/fruit.jpg" alt="fruit parfait"
+                            <img src="{% static 'media/fruit.jpg' %}" alt="fruit parfait"
                                 class="main__menu--swiper--wrapper--slide--food--img">
                             <div class="main__menu--food--text">
                                 <h4 class="main__menu--food--text--title">Fruit Parfait</h4>
@@ -270,7 +271,7 @@
                             </div>
                         </div>
                         <div class="main__menu--swiper--wrapper--slide--food">
-                            <img src="./media/marmalade.jpg" alt="Marmalade Selection"
+                            <img src="{% static 'media/marmalade.jpg' %}" alt="Marmalade Selection"
                                 class="main__menu--swiper--wrapper--slide--food--img">
                             <div class="main__menu--food--text">
                                 <h4 class="main__menu--food--text--title">Marmalade Selection</h4>
@@ -279,7 +280,7 @@
                             </div>
                         </div>
                         <div class="main__menu--swiper--wrapper--slide--food">
-                            <img src="./media/cheese.jpg" alt="cheese plate"
+                            <img src="{% static 'media/cheese.jpg' %}" alt="cheese plate"
                                 class="main__menu--swiper--wrapper--slide--food--img">
                             <div class="main__menu--food--text">
                                 <h4 class="main__menu--food--text--title">Cheese Plate</h4>
@@ -301,12 +302,12 @@
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper main__slider--swiper--wrapper">
                     <!-- Slides -->
-                    <div class="swiper-slide main__slider--swiper--wrapper--slide"><img src="./media/gym.jpg"
+                    <div class="swiper-slide main__slider--swiper--wrapper--slide"><img src="{% static 'media/gym.jpg' %}"
                             alt="gym of hotel" class="slide main__slider--swiper--wrapper--slide--img" /></div>
-                    <div class="swiper-slide main__slider--swiper--wrapper--slide"><img src="./media/restaurant.jpg"
+                    <div class="swiper-slide main__slider--swiper--wrapper--slide"><img src="{% static 'media/restaurant.jpg' %}"
                             alt="restaurant of hotel" class="slide main__slider--swiper--wrapper--slide--img" />
                     </div>
-                    <div class="swiper-slide main__slider--swiper--wrapper--slide"><img src="./media/room.jpg"
+                    <div class="swiper-slide main__slider--swiper--wrapper--slide"><img src="{% static 'media/room.jpg' %}"
                             alt="room of hotel" class="slide main__slider--swiper--wrapper--slide--img" /></div>
 
 
@@ -319,28 +320,28 @@
         </div>
         <div class="main__data">
             <div class="main__data--info">
-                <img src="./media/rocket.png" alt="rocket icon" class="main__data--info--icon">
+                <img src="{% static 'media/rocket.png' %}" alt="rocket icon" class="main__data--info--icon">
                 <div class="main__data--info--text">
                     <p class="main__data--info--text--number">84K<span>+</span></p>
                     <p class="main__data--info--text--desc">Projects are Completed</p>
                 </div>
             </div>
             <div class="main__data--info">
-                <img src="./media/teamData.png" alt="people icon" class="main__data--info--icon">
+                <img src="{% static 'media/teamData.png' %}" alt="people icon" class="main__data--info--icon">
                 <div class="main__data--info--text">
                     <p class="main__data--info--text--number">10M<span>+</span></p>
                     <p class="main__data--info--text--desc">Active Backers Around World</p>
                 </div>
             </div>
             <div class="main__data--info">
-                <img src="./media/progress.png" alt="statistics icon" class="main__data--info--icon">
+                <img src="{% static 'media/progress.png' %}" alt="statistics icon" class="main__data--info--icon">
                 <div class="main__data--info--text">
                     <p class="main__data--info--text--number">02K<span>+</span></p>
                     <p class="main__data--info--text--desc">Categories Served</p>
                 </div>
             </div>
             <div class="main__data--info">
-                <img src="./media/book.png" alt="book icon" class="main__data--info--icon">
+                <img src="{% static 'media/book.png' %}" alt="book icon" class="main__data--info--icon">
                 <div class="main__data--info--text">
                     <p class="main__data--info--text--number">100M<span>+</span></p>
                     <p class="main__data--info--text--desc">Idea Raised funds</p>
@@ -465,7 +466,7 @@
         <div class="footer__contact">
             <h4 class="footer__contact--title">Contact Us.</h4>
             <div class="footer__contact--element">
-                <img src="./media/footerPhone.png" alt="phone icon" class="footer__contact--element-icon">
+                <img src="{% static 'media/footerPhone.png' %}" alt="phone icon" class="footer__contact--element-icon">
                 <p class="footer__contact--element--data">
                     <span class="footer__contact--element--data--key"> Phone Number</span>
                     <br />
@@ -473,7 +474,7 @@
                 </p>
             </div>
             <div class="footer__contact--element">
-                <img src="./media/email.png" alt="email icon" class="footer__contact--element-icon">
+                <img src="{% static 'media/email.png' %}" alt="email icon" class="footer__contact--element-icon">
                 <p class="footer__contact--element--data">
                     <span class="footer__contact--element--data--key">Email Address</span>
                     <br />
@@ -481,7 +482,7 @@
                 </p>
             </div>
             <div class="footer__contact--element">
-                <img src="./media/location.png" alt="location icon" class="footer__contact--element-icon">
+                <img src="{% static 'media/location.png' %}" alt="location icon" class="footer__contact--element-icon">
                 <p class="footer__contact--element--data">
                     <span class="footer__contact--element--data--key"> Office Address</span>
                     <br />
@@ -499,8 +500,8 @@
         </p>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="./js/index.js"></script>
-    <script src="./js/slider.js"></script>
+    <script src="{% static 'js/index.js' %}"></script>
+    <script src="{% static 'slider.js' %}"></script>
 </body>
 
 </html>
