@@ -9,9 +9,21 @@ def view_rooms(request):
     
     results = []
     for room in data:
-        results.append(f'ID: {room.id}, Number: {room.number}, photo: {room.photo}, type: {room.type}, bed: {room.bed}, amenities: {room.amenities}, description: {room.description}, rate: {room.rate}, price: {room.price}, discount: {room.discount}, available: {room.available}')
-    
-    return HttpResponse(results)
+        results.append({
+            'id': room.id,
+            'number': room.number,
+            'photo': room.photo,
+            'type': room.type,
+            'bed': room.bed,
+            'amenities': room.amenities,
+            'description': room.description,
+            'rate': room.rate,
+            'price': room.price,
+            'discount': room.discount,
+            'available': room.available
+        })
+        
+    return render(request, 'rooms.html', {'rooms': results})
 
 def view_room_id(request, room_id):
     data = Rooms.objects.get(id=room_id)
