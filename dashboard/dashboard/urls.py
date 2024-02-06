@@ -21,15 +21,20 @@ from hotelMiranda.views import contactsViews, roomsViews, bookingViews
 
 urlpatterns = [
     path('', TemplateView.as_view(template_name='index.html'), name='index'),
+    path('rooms/', TemplateView.as_view(template_name='rooms.html'), name='rooms'),
+    path('roomDetails/', TemplateView.as_view(template_name='roomDetails.html'), name='roomDetails'),
+    path('offers/', TemplateView.as_view(template_name='offers.html'), name='offers'),
+    path('contact/', TemplateView.as_view(template_name='contact.html'), name='contact'),
+    path('about/', TemplateView.as_view(template_name='about.html'), name='about'),
     
-    path('admin/', admin.site.urls),
+    # path('admin/', admin.site.urls),
     
-    path('rooms/', roomsViews.view_rooms, name='rooms'),
-    path('rooms/<int:room_id>', roomsViews.view_room_id, name='room'),
+    # path('rooms/', roomsViews.view_rooms, name='rooms'),
+    # path('rooms/<int:room_id>', roomsViews.view_room_id, name='room'),
     
-    path('contacts/', contactsViews.view_contacts, name='contacts'),
-    path('contacts/new', contactsViews.post_contact, name='new_contact'),
+    # path('contacts/', contactsViews.view_contacts, name='contacts'),
+    # path('contacts/new', contactsViews.post_contact, name='new_contact'),
     
     
-    path('bookings/', bookingViews.post_booking, name='new_booking')
+    # path('bookings/', bookingViews.post_booking, name='new_booking')
 ]
