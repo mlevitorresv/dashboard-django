@@ -13,7 +13,7 @@ class Rooms(models.Model):
     available = models.BooleanField()
     
     def __str__(self):
-        return f'room {self.number}'
+        return f'room {self}'
 
 class Contact(models.Model):
     photo = models.CharField(max_length=255)
@@ -26,7 +26,7 @@ class Contact(models.Model):
     archived = models.BooleanField()
     
     def __str__(self):
-        return f'room {self.name}'
+        return f'contact {self}'
 
 class Booking(models.Model):
     photo = models.CharField(max_length=255)
@@ -42,4 +42,4 @@ class Booking(models.Model):
     status = models.CharField(max_length=255)
     
     def __str__(self):
-        return f'room {self.name}'
+        return f'booking {self}'
