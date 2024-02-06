@@ -1,0 +1,45 @@
+.main__data{
+    padding: 2em 1em;
+    text-align: center;
+    background-color: #222;
+
+    &--info{
+        padding: 1em auto;
+        margin-bottom: 5em;
+
+        &--text{
+            &--number{
+                color: white;
+                font-family: 'Roboto';
+                font-size: 3.6em;
+                font-weight: 700;
+
+                span{
+                    font-size: 1em;
+                }
+            }
+
+            &--desc{
+                color: #999;
+                font-family: 'Roboto';
+                font-size: 1em;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width: 1000px){
+    .main__data{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0 15%;
+
+        &--info{
+            margin: 2.5em 0;
+        }
+    }
+
+}

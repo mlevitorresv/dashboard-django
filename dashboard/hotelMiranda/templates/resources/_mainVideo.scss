@@ -1,0 +1,78 @@
+.main__video{
+    background-color: #222;
+    padding: 2em 1em;
+
+    &--info{
+        color: #BDAC8D;
+        font-family: 'Archivo';
+        font-size: .9em;
+        font-weight: 700;
+        letter-spacing: .2em;
+        margin-bottom: 2em;
+    }
+
+    &--title{
+        color: white;
+        font-family: 'Old Standard TT';
+        font-weight: 400;
+        font-size: 3.5em;
+    }
+
+    &--desc{
+        color: #C2C2C2;
+        font-family: 'Archivo';
+        font-size: .9em;
+        font-weight: 400;
+        line-height: 1.5em;
+    }
+
+    &--repro{
+        width: 100%;
+        margin: 2em 0;
+    }
+
+    &--bt{
+        background-color: #BEAD8E;
+        padding: 1.5em 2em;
+        width: 60%;
+        border: none;
+        color: white;
+        font-family: 'Archivo';
+        font-size: .9em;
+        font-weight: 700;
+        letter-spacing: .2em;
+    }
+}
+
+
+@media only screen and (min-width: 1000px){
+    
+    .main__video{
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(to right, #222 70%, #AD9D82 30%);
+
+        padding: 7em 15%;
+
+        &--title{
+            width: 40%;
+        }
+
+        &--desc{
+            width: 38%;
+        }
+
+        &--bt{
+            width: 17%;
+            margin-top: -30em;
+        }
+
+        &--repro{
+            position: relative;
+            left: 45%;
+            bottom: 20em;
+            width: 40%;
+            height:25em;
+        }
+    }
+}

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link rel="stylesheet" href="./css/style.css">
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <title>About</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__all">
+            <div class="header__all--left">
+                <img src="./media/burgerIcon.png" alt="menu icon" class="header__all--left--burger" id="burgerIcon"/>
+                <img src="./media/crossBurger.png" alt="cross icon" class="header__all--left--cross" id="crossBurgerIcon"/>                
+                <a href="./index.html" class="header__all--left--logo">
+                    <h1 class="header__all--left--logo--H">H</h1>
+                    <h1 class="header__all--left--logo--name">Hotel<br />Miranda</h1>
+                </a>
+            </div>
+
+            <div class="header__all--menu" id="menu">
+                <ul class="header__all--menu--items">
+                    <a href="./about.html" class="header__all--menu--items--link"><li class="header__all--menu--items--about">About Us</li></a>
+                    <a href="./rooms.html" class="header__all--menu--items--link"><li class="header__all--menu--items--rooms">Rooms</li></a>
+                    <a href="./offers.html" class="header__all--menu--items--link"><li class="header__all--menu--items--offers">Offers</li></a>
+                    <a href="./contact.html" class="header__all--menu--items--link"><li class="header__all--menu--items--contact">Contact</li></a>
+                </ul>
+            </div>
+
+            <div class="header__all--right">
+                <img src="./media/personIcon.png" alt="person icon" class="header__all--right--person" />
+                <img src="./media/lensIcon.png" alt="lens icon"  class="header__all--right--lens"/>
+            </div>
+        </div>
+    </header>
+
+
+    <main class="main__us">
+        <div class="main__us--intro">
+            <p class="main__us--intro--slogan">THE ULTIMATE LUXURY</p>
+            <h1 class="main__us--intro--title">About Us</h1>
+            <p class="main__us--intro--divider">Home | <span class="main__us--intro--divider--gold">About</span></p>
+        </div>
+        <div class="main__us--video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Bu3Doe45lcU?si=LAQC-6MOY4JAexwE&amp;clip=UgkxtV5CTXwdq5Q9yDxTq9jSjhMjSF8GSJfH&amp;clipt=EKjDARj4yQQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="main__us--video--repro"></iframe>
+        </div>
+
+        <div class="main__us--customer">
+            <h3 class="main__us--customer--title">
+                Hello. Our hotel has been present for over 20 years. We make the best for all our customers.
+            </h3>
+            <div class="main__us--customer--adventages">
+                <div class="main__us--customer--adventages--adv">
+                    <img src="./media/Breakfast.svg" alt="a plane svg">
+                </div>
+                <div class="main__us--customer--adventages--adv">
+                    <img src="./media/plane.svg" alt="a plane svg">
+                </div>
+                <div class="main__us--customer--adventages--adv">
+                    <img src="./media/cityGuide.svg" alt="a plane svg">
+                </div>
+                <div class="main__us--customer--adventages--adv">
+                    <img src="./media/luxuryRoom.svg" alt="a plane svg">
+                </div>
+            </div>
+        </div>
+
+        <div class="main__us--restaurant">
+            <img src="./media/restaurant.jpg" alt="a restaurant" class="main__us--restaurant--image">
+            <div class="main__us--restaurant--text">
+                <p class="main__us--restaurant--text--info">RESTAURANT</p>
+                <h1 class="main__us--restaurant--text--title">Get Restaurant Facilities & Many Other More</h1>
+                <p class="main__us--restaurant--text--desc">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tem por incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+                </p>
+                <button class="main__us--restaurant--text--bt" onclick="location.href='./index.html'">TAKE A TOUR</button>
+            </div>
+            
+        </div>
+
+        <div class="main__us--facilities">
+            <p class="main__us--facilities--info">FACILITIES</p>
+            <h1 class="main__us--facilities--title">Core Features</h1>
+
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide main__us--facilities--content">
+                        <p class="main__us--facilities--content--rating">01</p>
+                        <img src="./media/iconRating.png" alt="icon rating" class="main__us--facilities--content--rating--icon">
+                        <h4 class="main__us--facilities--content--subtitle">Have High Rating</h4>
+                        <p class="main__us--facilities--content--desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna..</p>
+                    </div>
+
+                    <div class="swiper-slide main__us--facilities--content">
+                        <p class="main__us--facilities--content--rating">02</p>
+                        <img src="./media/clock.png" alt="clock icon" class="main__us--facilities--content--rating--icon">
+                        <h4 class="main__us--facilities--content--subtitle">Quiet Hours</h4>
+                        <p class="main__us--facilities--content--desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna..</p>
+                    </div>
+
+                    <div class="swiper-slide main__us--facilities--content">
+                        <p class="main__us--facilities--content--rating">03</p>
+                        <img src="./media/location.png" alt="location icon" class="main__us--facilities--content--rating--icon">
+                        <h4 class="main__us--facilities--content--subtitle">Best Location</h4>
+                        <p class="main__us--facilities--content--desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna..</p>
+                    </div>
+
+                    <div class="swiper-slide main__us--facilities--content">
+                        <p class="main__us--facilities--content--rating">04</p>
+                        <img src="./media/clockCross.png" alt="clock with cross icon" class="main__us--facilities--content--rating--icon">
+                        <h4 class="main__us--facilities--content--subtitle">Free Cancellation</h4>
+                        <p class="main__us--facilities--content--desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna..</p>
+                    </div>
+
+                    <div class="swiper-slide main__us--facilities--content">
+                        <p class="main__us--facilities--content--rating">05</p>
+                        <img src="./media/payment.png" alt="payment icon" class="main__us--facilities--content--rating--icon">
+                        <h4 class="main__us--facilities--content--subtitle">Payment Options</h4>
+                        <p class="main__us--facilities--content--desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna..</p>
+                    </div>
+
+                    <div class="swiper-slide main__us--facilities--content">
+                        <p class="main__us--facilities--content--rating">06</p>
+                        <img src="./media/certificate.png" alt="certificate icon" class="main__us--facilities--content--rating--icon">
+                        <h4 class="main__us--facilities--content--subtitle">Special Offers</h4>
+                        <p class="main__us--facilities--content--desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna..</p>
+                    </div>
+
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+        <div class="main__us--facts">
+            <p class="main__us--facts--info">COUNTER</p>
+            <h3 class="main__us--facts--title">Some Fun Facts</h3>
+            <div class="main__us--facts--elements">
+                <div class="main__us--facts--elements--element">
+                    <img src="./media/happyUser.svg" alt="a happy user svg" class="main__us--facts--elements--element--image">
+                    <p class="main__us--facts--elements--element--data">
+                        <span class="main__us--facts--elements--element--data--key"> 8000</span>
+                        <br />
+                        <span class="main__us--facts--elements--element--data--value">Happy Users</span>
+                    </p>
+                    <img src="./media/arrow.svg" alt="an arrow svg" class="main__us--facts--elements--element--arrow">
+                </div>
+                <div class="main__us--facts--elements--element">
+                    <img src="./media/handRating.svg" alt="a hand rating svg" class="main__us--facts--elements--element--image">
+                    <p class="main__us--facts--elements--element--data">
+                        <span class="main__us--facts--elements--element--data--key">10M</span>
+                        <br />
+                        <span class="main__us--facts--elements--element--data--value">Reviews & Appriciate</span>
+                    </p>
+                    <img src="./media/arrow.svg" alt="an arrow svg" class="main__us--facts--element--elements--arrow">
+                </div>
+                <div class="main__us--facts--elements--element">
+                    <img src="./media/worldLocation.svg" alt="a world svg" class="main__us--facts--elements--element--image">
+                    <p class="main__us--facts--elements--element--data">
+                        <span class="main__us--facts--elements--element--data--key">100</span>
+                        <br />
+                        <span class="main__us--facts--elements--element--data--value">Country Coverage</span>
+                    </p>
+                    <img src="./media/arrow.svg" alt="an arrow svg" class="main__us--facts--elements--element--arrow">
+                </div>
+            </div>
+            
+            <div class="main__us--facts--slider">
+                <div class="swiper main__us--facts--slider--swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper main__us--facts--slider--swiper--wrapper">
+                      <!-- Slides -->
+                      <div class="swiper-slide main__us--facts--slider--swiper--wrapper--slide"><img src="./media/gym.jpg" alt="gym of hotel" class="slide main__us--facts--slider--swiper--wrapper--slide--img" /></div>
+                      <div class="swiper-slide main__us--facts--slider--swiper--wrapper--slide"><img src="./media/restaurant.jpg" alt="restaurant of hotel" class="slide main__us--facts--slider--swiper--wrapper--slide--img" /></div>
+                    </div>
+        
+                    <div class="swiper-pagination main__slider--swiper--pagination"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <footer class="footer">
+        <div class="footer__us">
+
+            <div class="footer__us--logo">
+                <p class="footer__us--logo--H">H</p>
+                <p class="footer__us--logo--name"><span class="footer__us--logo--name--strong">HOTEL</span><br />MIRANDA</p>
+            </div>
+            <p class="footer__us--desc">
+                Lorem ipsum dolor sit amet, consect etur adipisicing elit, sed doing eius mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat ion ullamco laboris nisi.
+            </p>
+            <div class="footer__us--social">
+                <div class="footer__us--social--element">
+                    <img src="./media/facebook.svg" alt="facebook  icon" class="footer__us--social--element--icon">
+                </div>
+                <div class="footer__us--social--element">
+                    <img src="./media/twitter.svg" alt="twitter icon" class="footer__us--social--element--icon">
+                </div>
+                <div class="footer__us--social--element">
+                    <img src="./media/behance.svg" alt="behance icon" class="footer__us--social--element--icon">
+                </div>
+                <div class="footer__us--social--element">
+                    <img src="./media/linkedin.svg" alt="linkedin icon" class="footer__us--social--element--icon">
+                </div>
+                <div class="footer__us--social--element">
+                    <img src="./media/yt.svg" alt="youtube icon" class="footer__us--social--element--icon">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer__services">
+            <h4 class="footer__services--title">Services.</h4>
+            <div class="footer__services--elements">
+                <p class="footer__services--elements--element">+ Resturent & Bar</p>
+                <p class="footer__services--elements--element">+ Swimming Pool</p>
+                <p class="footer__services--elements--element">+ Wellness & Spa</p>
+                <p class="footer__services--elements--element">+ Restaurant</p>
+                <p class="footer__services--elements--element">+ Conference Room</p>
+                <p class="footer__services--elements--element">+ Coctail Party House</p>
+                <p class="footer__services--elements--element">+ Gaming Zone</p>
+                <p class="footer__services--elements--element">+ Marrige Party</p>
+                <p class="footer__services--elements--element">+ Party Planning</p>
+                <p class="footer__services--elements--element">+ Tour Consultancy</p>
+            </div>
+        </div>
+        <div class="footer__contact">
+            <h4 class="footer__contact--title">Contact Us.</h4>
+            <div class="footer__contact--element">
+                <img src="./media/footerPhone.png" alt="phone icon" class="footer__contact--element-icon">
+                <p class="footer__contact--element--data">
+                    <span class="footer__contact--element--data--key"> Phone Number</span>
+                    <br />
+                    <span class="footer__contact--element--data--value">+34 620 46 82 40</span>
+                </p>
+            </div>
+            <div class="footer__contact--element">
+                <img src="./media/email.png" alt="email icon" class="footer__contact--element-icon">
+                <p class="footer__contact--element--data">
+                    <span class="footer__contact--element--data--key">Email Address</span>
+                    <br />
+                    <span class="footer__contact--element--data--value">levitorres66@gmail.com</span>
+                </p>
+            </div>
+            <div class="footer__contact--element">
+                <img src="./media/location.png" alt="location icon" class="footer__contact--element-icon">
+                <p class="footer__contact--element--data">
+                    <span class="footer__contact--element--data--key"> Office Address</span>
+                    <br />
+                    <span class="footer__contact--element--data--value">Princesa 31, planta 2 (28008 Madrid)</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <div class="footer__end">
+        <p class="footer__end--copy">
+            Copyright By Manuel Leví Torres Vicente - 2023
+        </p>
+        <p class="footer__end--terms">
+            Terms of use | Privacy Environmental policy
+        </p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/slider.js"></script>
+</body>
+</html>

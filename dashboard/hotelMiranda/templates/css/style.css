@@ -1,0 +1,2220 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@100;200;300;400;500;600;700;800;900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 320px;
+}
+
+.header__all {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.29);
+}
+.header__all--left {
+  display: inline-block;
+  padding: auto 0;
+}
+.header__all--left--cross {
+  display: none;
+}
+.header__all--left--logo {
+  text-decoration: none;
+  color: black;
+  margin-left: 1em;
+  display: inline-flex;
+  align-items: center;
+  font-family: "Archivo";
+}
+.header__all--left--logo--H {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5em;
+  margin-right: 0.5em;
+  height: 1.5em;
+  box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.212);
+  font-size: 1.5em;
+}
+.header__all--left--logo--name {
+  font-size: 1em;
+}
+.header__all--right {
+  float: right;
+}
+.header__all--right--lens {
+  margin-left: 1em;
+}
+.header__all--menu {
+  position: absolute;
+  z-index: 99;
+  background-color: #fff;
+  width: 100%;
+  left: 0;
+  flex-direction: column;
+  align-items: start;
+  padding: 0.2em 1.3em;
+  justify-content: space-around;
+  top: 4em;
+  display: none;
+}
+.header__all--menu--items {
+  list-style-type: none;
+}
+.header__all--menu--items--link {
+  text-decoration: none;
+  color: black;
+  font-family: "Archivo";
+  font-size: 1em;
+  font-weight: 600;
+  margin: 1em;
+}
+
+@media only screen and (min-width: 1000px) {
+  .header {
+    width: 100%;
+    background-color: #222;
+  }
+  .header__all {
+    padding: 2em 5em;
+    background-color: #fff;
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    top: 2em;
+  }
+  .header__all--left--burger {
+    display: none;
+  }
+  .header__all--menu {
+    display: block;
+    position: initial;
+    flex-direction: row;
+    width: fit-content;
+  }
+  .header__all--menu--items--link {
+    display: inline-block;
+  }
+}
+.main__info {
+  background-color: #333;
+  color: white;
+  padding: 3em 1em;
+}
+.main__info--slogan {
+  width: 60%;
+  font-family: "Archivo";
+  font-size: 0.7em;
+  font-weight: 700;
+  line-height: 1.2em;
+  letter-spacing: 0.1em;
+  margin-bottom: 2em;
+}
+.main__info--title {
+  font-family: "Old Standard TT";
+  font-size: 3.5em;
+  font-weight: 400;
+  margin-bottom: 0.5em;
+}
+.main__info--bt {
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  width: 50%;
+  display: block;
+  color: white;
+}
+.main__info--btTour {
+  background-color: #BEAD8E;
+  border: none;
+  margin-bottom: 2em;
+}
+.main__info--btLearn {
+  background-color: #222;
+  border: 2px solid rgba(255, 255, 255, 0.33);
+  margin-bottom: 2em;
+}
+
+@media only screen and (min-width: 1000px) {
+  .main__info {
+    padding: 7em 20em 5em;
+  }
+  .main__info--slogan {
+    font-family: "Archivo";
+    font-size: 0.9em;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.2em;
+    margin-bottom: 2em;
+  }
+  .main__info--title {
+    font-family: "Old Standard TT";
+    font-size: 7.5em;
+    font-weight: 400;
+    margin-bottom: 0.2em;
+    width: 60%;
+  }
+  .main__info--bt {
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    width: 17%;
+    display: inline-block;
+    color: white;
+    margin: 0 1em;
+  }
+}
+.main__availability {
+  padding: 2em 1em;
+  background-color: #222;
+  color: white;
+}
+.main__availability--form {
+  display: flex;
+  flex-direction: column;
+}
+.main__availability--form--data {
+  display: flex;
+  flex-direction: column;
+}
+.main__availability--form--data--text {
+  font-family: "Roboto";
+  font-size: 1em;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+.main__availability--form--data--input {
+  margin-bottom: 2em;
+  border: none;
+  border-bottom: 2px solid #BEAD8E;
+  background-color: #222;
+  color: #686868;
+  font-family: "Roboto";
+  font-size: 0.9em;
+  font-weight: 400;
+}
+.main__availability--form--bt {
+  background-color: #BEAD8E;
+  padding: 1.5em 2em;
+  width: 60%;
+  border: none;
+  color: white;
+}
+
+@media only screen and (min-width: 1000px) {
+  .main__availability--form {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .main__availability--form--data {
+    margin-left: 2em;
+  }
+  .main__availability--form--data--input {
+    width: 20em;
+    margin-bottom: 0;
+  }
+  .main__availability--form--bt {
+    width: 14%;
+    align-self: flex-start;
+    margin-left: 10em;
+  }
+}
+.main__about {
+  margin-top: 4em;
+}
+.main__about--underground {
+  background-color: #F9F9F9;
+  padding: 2em 1em 6em;
+}
+.main__about--underground--info {
+  color: #777;
+  font-family: "Archivo";
+  font-size: 0.8em;
+  font-weight: 700;
+  line-height: 1.2em;
+  letter-spacing: 0.1em;
+  margin-bottom: 2em;
+}
+.main__about--underground--title {
+  color: #111;
+  font-family: "Old Standard TT";
+  font-size: 3.5em;
+  font-weight: 400;
+  margin-bottom: 0.3em;
+}
+.main__about--underground--desc {
+  color: #777;
+  font-family: "Archivo";
+  font-size: 0.9em;
+  font-weight: 400;
+  line-height: 1.5em;
+  margin-bottom: 2em;
+}
+.main__about--underground--bt-book {
+  background-color: #BEAD8E;
+  padding: 1.5em 2em;
+  width: 60%;
+  border: none;
+  color: white;
+}
+.main__about--img--terrace {
+  width: 80%;
+  margin: 0 10%;
+  position: relative;
+  bottom: 3em;
+}
+.main__about--team {
+  padding: 2em 1em;
+}
+.main__about--team--strong {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding: 1em;
+  box-shadow: 0px 8px 16px 0px rgba(34, 34, 34, 0.02);
+  position: relative;
+}
+.main__about--team--strong--back {
+  position: absolute;
+  left: 10em;
+}
+.main__about--team--strong--front {
+  position: relative;
+}
+.main__about--team--strong--title {
+  color: #111;
+  font-family: "Old Standard TT";
+  font-size: 1.9em;
+  font-weight: 400;
+  line-height: 1.9em;
+  position: relative;
+}
+.main__about--team--strong--desc {
+  color: #111;
+  font-family: "Roboto";
+  font-size: 0.9em;
+  font-weight: 400;
+  line-height: 1.3em;
+  margin-bottom: 2em;
+}
+.main__about--team--strong--team {
+  display: none;
+}
+.main__about--luxury {
+  margin: auto;
+  width: 80%;
+  background-color: #222;
+}
+.main__about--luxury--img {
+  width: 100%;
+}
+.main__about--luxury--desc {
+  text-align: center;
+  color: white;
+  padding: 4em 2em;
+}
+.main__about--luxury--desc--title {
+  font-family: "Old Standard TT";
+  font-size: 1.9em;
+  font-weight: 400;
+  line-height: 1.9em;
+  margin-top: 0.5em;
+}
+.main__about--luxury--desc--text {
+  font-family: "Roboto";
+  font-size: 0.9em;
+  font-weight: 400;
+  line-height: 1.3em;
+  margin-top: 0.5em;
+}
+.main__about--rooms {
+  padding: 2em 1em;
+  text-align: center;
+}
+.main__about--rooms--info {
+  color: #777;
+  font-family: "Archivo";
+  font-size: 0.9em;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin-bottom: 2em;
+}
+.main__about--rooms--title {
+  color: #222;
+  font-family: "Old Standard TT";
+  font-size: 3.5em;
+  font-weight: 400;
+}
+.main__about--rooms--swiper {
+  width: 100%;
+  height: auto;
+}
+.main__about--rooms--swiper--wrapper--slide--img {
+  width: 100%;
+}
+.main__about--rooms--duplex {
+  padding: 1em;
+}
+.main__about--rooms--duplex--title {
+  color: #222;
+  font-family: "Old Standard TT";
+  font-size: 1.8em;
+  font-weight: 400;
+}
+.main__about--rooms--duplex--desc {
+  color: #777;
+  font-family: "Roboto";
+  font-size: 0.9em;
+  font-weight: 400;
+  line-height: 1.5em;
+}
+.main__about--rooms--duplex--price {
+  color: #BEAD8E;
+  font-family: "Archivo";
+  font-size: 2em;
+  font-weight: 700;
+  line-height: 2.6em;
+}
+.main__about--rooms--duplex--night {
+  color: #BEAD8E;
+  font-family: "Archivo";
+  font-size: 0.8em;
+  font-weight: 700;
+  line-height: 2.6em;
+}
+
+@media only screen and (min-width: 1000px) {
+  .main__about {
+    justify-content: center;
+    padding-top: 5em;
+  }
+  .main__about--underground {
+    background: transparent;
+    width: 23%;
+    position: relative;
+    left: 60%;
+    top: 5.6em;
+    z-index: 100;
+  }
+  .main__about--img--terrace {
+    width: 50%;
+    margin: 0;
+    margin-left: 50%;
+    position: relative;
+    bottom: 20em;
+  }
+  .main__about--team {
+    height: 0;
+    padding: 0;
+  }
+  .main__about--team--strong {
+    margin: 0;
+    width: 16em;
+    left: 15%;
+    bottom: 65em;
+  }
+  .main__about--team--strong--team {
+    width: 16em;
+    height: 18em;
+    margin-top: 3em;
+    display: block;
+  }
+  .main__about--luxury {
+    width: 16em;
+    background-color: transparent;
+    position: relative;
+    bottom: 70em;
+    height: 0;
+  }
+  .main__about--luxury--img {
+    width: 100%;
+    height: 20em;
+    margin-bottom: 2em;
+  }
+  .main__about--luxury--desc {
+    text-align: center;
+    color: white;
+    background-color: #222;
+    padding: 4em 2em;
+  }
+  .main__about--luxury--desc--title {
+    font-family: "Old Standard TT";
+    font-size: 1.9em;
+    font-weight: 400;
+    line-height: 1.9em;
+    margin-top: 0.5em;
+  }
+  .main__about--luxury--desc--text {
+    font-family: "Roboto";
+    font-size: 0.9em;
+    font-weight: 400;
+    line-height: 1.3em;
+    margin-top: 0.5em;
+  }
+  .main__about--rooms--swiper {
+    width: 100%;
+    height: auto;
+  }
+  .main__about--rooms--swiper--wrapper--slide--img {
+    width: 100%;
+  }
+  .main__about--rooms--duplex {
+    padding: 1em;
+  }
+  .main__about--rooms--duplex--title {
+    color: #222;
+    font-family: "Old Standard TT";
+    font-size: 1.8em;
+    font-weight: 400;
+  }
+  .main__about--rooms--duplex--desc {
+    color: #777;
+    font-family: "Roboto";
+    font-size: 0.9em;
+    font-weight: 400;
+    line-height: 1.5em;
+  }
+  .main__about--rooms--duplex--price {
+    color: #BEAD8E;
+    font-family: "Archivo";
+    font-size: 2em;
+    font-weight: 700;
+    line-height: 2.6em;
+  }
+  .main__about--rooms--duplex--night {
+    color: #BEAD8E;
+    font-family: "Archivo";
+    font-size: 0.8em;
+    font-weight: 700;
+    line-height: 2.6em;
+  }
+}
+.main__video {
+  background-color: #222;
+  padding: 2em 1em;
+}
+.main__video--info {
+  color: #BDAC8D;
+  font-family: "Archivo";
+  font-size: 0.9em;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  margin-bottom: 2em;
+}
+.main__video--title {
+  color: white;
+  font-family: "Old Standard TT";
+  font-weight: 400;
+  font-size: 3.5em;
+}
+.main__video--desc {
+  color: #C2C2C2;
+  font-family: "Archivo";
+  font-size: 0.9em;
+  font-weight: 400;
+  line-height: 1.5em;
+}
+.main__video--repro {
+  width: 100%;
+  margin: 2em 0;
+}
+.main__video--bt {
+  background-color: #BEAD8E;
+  padding: 1.5em 2em;
+  width: 60%;
+  border: none;
+  color: white;
+  font-family: "Archivo";
+  font-size: 0.9em;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+@media only screen and (min-width: 1000px) {
+  .main__video {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to right, #222 70%, #AD9D82 30%);
+    padding: 7em 15%;
+  }
+  .main__video--title {
+    width: 40%;
+  }
+  .main__video--desc {
+    width: 38%;
+  }
+  .main__video--bt {
+    width: 17%;
+    margin-top: -30em;
+  }
+  .main__video--repro {
+    position: relative;
+    left: 45%;
+    bottom: 20em;
+    width: 40%;
+    height: 25em;
+  }
+}
+.main__facilities {
+  padding: 2em 1em;
+}
+.main__facilities--info {
+  color: #777;
+  font-family: "Archivo";
+  font-size: 0.9em;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  width: fit-content;
+  margin: 0 auto;
+}
+.main__facilities--title {
+  color: #222;
+  font-family: "Old Standard TT";
+  font-size: 3.5em;
+  font-weight: 400;
+  width: fit-content;
+  margin: 0.5em auto;
+}
+.main__facilities--rating--num {
+  float: right;
+  color: rgba(34, 34, 34, 0.04);
+  font-family: "Archivo";
+  font-size: 7.5em;
+  font-weight: 700;
+}
+.main__facilities--rating--icon {
+  position: relative;
+  top: 5em;
+  margin-bottom: 6em;
+}
+.main__facilities--rating--subtitle {
+  color: #222;
+  font-family: "Old Standard TT";
+  font-size: 1.9em;
+  font-weight: 400;
+  line-height: 1.9em;
+}
+.main__facilities--rating--desc {
+  color: #777;
+  font-family: "Archivo";
+  font-size: 0.9em;
+  font-weight: 400;
+  line-height: 1.5em;
+  width: 80%;
+}
+.main__facilities--rating:hover {
+  background-color: #222;
+  color: white;
+}
+.main__facilities .swiper-pagination {
+  position: initial;
+}
+.main__facilities .swiper .swiper-pagination-bullet-active {
+  background-color: #BEAD8E;
+}
+
+@media only screen and (min-width: 1000px) {
+  .main__facilities {
+    width: 70%;
+    margin: 0 15%;
+  }
+  .main__facilities .swiper-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .main__facilities .swiper-slide {
+    max-width: 21em;
+  }
+  .main__facilities .swiper-pagination {
+    display: none;
+  }
+}
+.main__menu {
+  padding: 2em 1em;
+}
+.main__menu--donut {
+  position: absolute;
+  right: 0;
+}
+.main__menu--info {
+  color: #777;
+  font-family: "Archivo";
+  font-size: 0.9em;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  padding-top: 10em;
+}
+.main__menu--title {
+  color: #222;
+  font-family: "Old Standard TT";
+  font-size: 3.5em;
+  font-style: normal;
+  font-weight: 400;
+}
+.main__menu--swiper {
+  padding: 2em 1em;
+  width: 100%;
+}
+.main__menu--swiper--wrapper--slide--food {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+}
+.main__menu--swiper--wrapper--slide--food--img {
+  width: 120px;
+  height: 120px;
+  margin-right: 0.5em;
+}
+.main__menu--swiper--wrapper--slide--food--text--title {
+  color: #222;
+  font-family: "Old Standard TT";
+  font-size: 1.5em;
+  font-weight: 400;
+  line-height: 1.5em;
+}
+.main__menu--swiper--wrapper--slide--food--text--desc {
+  color: #222;
+  font-family: "Roboto";
+  font-size: 0.9em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5em;
+}
+.main__menu--swiper--wrapper--button {
+  background-color: white;
+  width: 30px !important;
+  height: 30px !important;
+}
+.main__menu--swiper--wrapper--button::after, .main__menu--swiper--wrapper--button::before {
+  color: black;
+  font-size: 1em !important;
+}
+.main__menu--swiper--wrapper--button:hover {
+  background-color: #BDAC8D;
+}
+.main__menu--swiper--wrapper--button:hover::after, .main__menu--swiper--wrapper--button:hover::before {
+  color: white;
+}
+.main__menu--swiper--pagination .swiper-pagination-bullet-active {
+  background-color: #BEAD8E;
+}
+
+@media only screen and (min-width: 1000px) {
+  .main__menu {
+    width: 100%;
+    padding: 5% 15%;
+  }
+  .main__menu--swiper--wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .main__menu--swiper--wrapper--slide {
+    flex: 0 0 45%;
+  }
+}
+.main__slider {
+  padding: 2em 1em;
+}
+.main__slider--swiper {
+  width: 100%;
+  height: 200px;
+}
+.main__slider--swiper--wrapper--slide--img {
+  width: 100%;
+}
+.main__slider--swiper--wrapper--button {
+  background-color: white;
+  width: 30px !important;
+  height: 30px !important;
+}
+.main__slider--swiper--wrapper--button__none {
+  display: none;
+}
+.main__slider--swiper--wrapper--button::after, .main__slider--swiper--wrapper--button::before {
+  color: black;
+  font-size: 1em !important;
+}
+.main__slider--swiper--wrapper--button:hover {
+  background-color: #BDAC8D;
+}
+.main__slider--swiper--wrapper--button:hover::after, .main__slider--swiper--wrapper--button:hover::before {
+  color: white;
+}
+.main__slider--swiper--pagination .swiper-pagination-bullet-active {
+  background-color: #BEAD8E;
+}
+
+@media only screen and (min-width: 1000px) {
+  .main__slider {
+    width: 100%;
+    padding: 0 15% 5%;
+  }
+  .main__slider--swiper--wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .main__slider--swiper--wrapper--slide {
+    flex: 0 0 25em;
+    max-width: 25em;
+  }
+  .main__slider--swiper--pagination {
+    display: none;
+  }
+}
+.main__data {
+  padding: 2em 1em;
+  text-align: center;
+  background-color: #222;
+}
+.main__data--info {
+  padding: 1em auto;
+  margin-bottom: 5em;
+}
+.main__data--info--text--number {
+  color: white;
+  font-family: "Roboto";
+  font-size: 3.6em;
+  font-weight: 700;
+}
+.main__data--info--text--number span {
+  font-size: 1em;
+}
+.main__data--info--text--desc {
+  color: #999;
+  font-family: "Roboto";
+  font-size: 1em;
+  font-weight: 700;
+}
+
+@media only screen and (min-width: 1000px) {
+  .main__data {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 15%;
+  }
+  .main__data--info {
+    margin: 2.5em 0;
+  }
+}
+.footer {
+  margin-top: 2em;
+  padding-top: 2em;
+  background: url("../media/footer.png"), rgb(255, 255, 255) 0px 0px/512% 99.174% no-repeat;
+}
+.footer__us--logo {
+  margin-left: 1em;
+  display: flex;
+  align-items: center;
+}
+.footer__us--logo--H {
+  display: inline-block;
+  background-color: #BEAD8E;
+  box-shadow: 0px 14px 24px 0px rgba(139, 139, 139, 0.15);
+  color: #FFF;
+  font-family: "Archivo";
+  font-size: 2.5em;
+  font-weight: 700;
+  padding: 0.3em;
+}
+.footer__us--logo--name {
+  display: inline-block;
+  color: #111;
+  font-family: "Archivo";
+  font-size: 1.5em;
+  font-weight: 400;
+  margin-left: 1em;
+}
+.footer__us--logo--name--strong {
+  font-weight: 700;
+}
+.footer__us--desc {
+  margin-left: 1em;
+  margin-top: 1em;
+  color: #777;
+  font-family: "Archivo";
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.6em;
+}
+.footer__us--social {
+  margin-left: 1em;
+  margin-top: 1em;
+  display: flex;
+}
+.footer__us--social--element {
+  margin: 0.5em;
+  padding: 0.5em;
+  background-color: white;
+}
+.footer__us--social--element:hover {
+  background-color: #BEAD8E;
+}
+.footer__us--social--element:hover--icon {
+  fill: white;
+}
+.footer__services {
+  margin-left: 1em;
+  margin-top: 1em;
+}
+.footer__services--title {
+  color: #222;
+  font-family: "Old Standard TT";
+  font-size: 1.5em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5em;
+}
+.footer__services--elements {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.footer__services--elements--element {
+  color: #777;
+  font-family: "Roboto";
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 3em;
+}
+.footer__contact {
+  margin-left: 1em;
+  margin-top: 1em;
+}
+.footer__contact--title {
+  color: #222;
+  font-family: "Old Standard TT";
+  font-size: 1.5em;
+  font-weight: 400;
+  line-height: 1.5em;
+  margin-bottom: 1em;
+}
+.footer__contact--element {
+  display: flex;
+  margin-bottom: 3em;
+}
+.footer__contact--element--data {
+  margin-left: 1em;
+}
+.footer__contact--element--data--key {
+  color: #222;
+  font-family: "Old Standard TT";
+  font-size: 1.3em;
+  font-weight: 400;
+  line-height: 1.5em;
+}
+.footer__contact--element--data--value {
+  color: #777;
+  font-family: "Roboto";
+  font-size: 0.9em;
+  font-weight: 400;
+}
+
+.footer__end {
+  background-color: #F8F8F8;
+  padding: 1em;
+}
+.footer__end--copy {
+  color: #222;
+  font-family: "Roboto";
+  font-size: 1em;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+.footer__end--terms {
+  color: #222;
+  font-family: "Roboto";
+  font-size: 1em;
+  font-weight: 700;
+}
+
+@media only screen and (min-width: 1000px) {
+  .footer {
+    display: flex;
+    justify-content: center;
+  }
+  .footer__us {
+    width: 17em;
+  }
+  .footer__services {
+    margin-left: 7em;
+  }
+  .footer__services--elements--element {
+    margin-right: 7em;
+  }
+  .footer__end {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2em;
+  }
+  .footer__end--copy {
+    margin-bottom: 0em;
+  }
+}
+.main__us--intro {
+  padding: 2em 1em;
+  background-color: #333;
+}
+.main__us--intro--slogan {
+  color: #FFF;
+  font-family: "Archivo";
+  font-size: 0.8em;
+  font-weight: 700;
+  line-height: 1.1em;
+  letter-spacing: 0.2em;
+  margin-bottom: 1em;
+}
+.main__us--intro--title {
+  color: #FFF;
+  font-family: "Old Standard TT";
+  font-size: 3.5em;
+  font-weight: 400;
+}
+.main__us--intro--divider {
+  background-color: white;
+  padding: 0.5em;
+  width: fit-content;
+  color: #222;
+  font-family: "Archivo";
+  font-size: 1em;
+  font-weight: 700;
+  position: relative;
+  top: 2em;
+  left: 60%;
+}
+.main__us--intro--divider--gold {
+  color: #BEAD8E;
+}
+
+@media only screen and (min-width: 1000px) {
+  .main__us--intro {
+    padding: 10em 20% 3em;
+  }
+  .main__us--intro--divider {
+    top: 3em;
+    left: 95%;
+  }
+}
+.main__us--video {
+  margin: 2em 1em;
+}
+.main__us--video--repro {
+  width: 100%;
+}
+
+@media only screen and (min-width: 1000px) {
+  .main__us--video {
+    margin: 10em 20%;
+  }
+  .main__us--video--repro {
+    height: 40em;
+  }
+}
+.main__us--customer {
+  padding: 1em 1em;
+}
+.main__us--customer--title {
+  color: #222;
+  font-family: "Old Standard TT";
+  font-size: 2em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -1.16px;
+  text-align: center;
+}
+.main__us--customer--adventages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+@media only screen and (min-width: 100px) {
+  .main__us--customer {
+    margin: 0 20%;
+  }
+  .main__us--customer--title {
+    font-size: 4.5em;
+    margin-bottom: 1em;
+  }
+}
+.main__us--restaurant {
+  margin: 2em 1em;
+  padding: 1em;
+  box-shadow: 0px 14px 24px 0px rgba(184, 184, 184, 0.1);
+}
+.main__us--restaurant--image {
+  width: 100%;
+}
+.main__us--restaurant--text--info {
+  color: #777;
+  font-family: "Archivo";
+  font-size: 0.9em;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin-top: 1em;
+}
+.main__us--restaurant--text--title {
+  color: #222;
+  font-family: "Old Standard TT";
+  font-size: 2.5em;
+  font-weight: 400;
+  margin-top: 0.5em;
+}
+.main__us--restaurant--text--desc {
+  color: #777;
+  font-family: "Archivo";
+  font-size: 0.9em;
+  font-weight: 400;
+  line-height: 1.5em;
+  margin-top: 1em;
+}
+.main__us--restaurant--text--bt {
+  margin-top: 1em;
+  padding: 1em 3em;
+  border: none;
+  background-color: #BEAD8E;
+  box-shadow: 0px 14px 24px 0px rgba(190, 173, 142, 0.36);
+  color: #FFF;
+  font-family: "Archivo";
+  font-size: 0.9em;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+@media only screen and (min-width: 1000px) {
+  .main__us--restaurant {
+    box-shadow: 0px 14px 24px 0px rgba(184, 184, 184, 0.1);
+    margin: 5em 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .main__us--restaurant--image {
+    width: 48%;
+  }
+  .main__us--restaurant--text {
+    width: 48%;
+  }
+}
+.main__us--facilities {
+  background-color: #222;
+  padding: 2em 1em;
+  text-align: center;
+}
+.main__us--facilities--info {
+  color: #FFF;
+  font-family: "Archivo";
+  font-size: 0.9em;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  margin: 1em auto;
+}
+.main__us--facilities--title {
+  color: #FFF;
+  font-family: "Old Standard TT";
+  font-size: 3.5em;
+  font-weight: 400;
+}
+.main__us--facilities--content {
+  background-color: #292929;
+  text-align: left;
+  padding: 1em 1em 2em;
+}
+.main__us--facilities--content--rating {
+  float: right;
+  color: #222;
+  font-family: "Archivo";
+  font-size: 7.5em;
+  font-weight: 700;
+}
+.main__us--facilities--content--rating--icon {
+  position: relative;
+  top: 5em;
+  margin-bottom: 6em;
+}
+.main__us--facilities--content--subtitle {
+  color: #FFF;
+  font-family: "Old Standard TT";
+  font-size: 1.9em;
+  font-weight: 400;
+  line-height: 1.9em;
+}
+.main__us--facilities--content--desc {
+  color: #FFF;
+  font-family: "Archivo";
+  font-size: 0.9em;
+  font-weight: 400;
+  line-height: 1.5em;
+  width: 80%;
+}
+.main__us--facilities .swiper-pagination {
+  position: initial;
+}
+.main__us--facilities .swiper .swiper-pagination-bullet-active {
+  background-color: #BEAD8E;
+}
+
+@media only screen and (min-width: 1000px) {
+  .main__us--facilities {
+    width: 100%;
+    padding: 5% 15%;
+  }
+  .main__us--facilities .swiper-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+  }
+  .main__us--facilities .swiper-slide {
+    max-width: 21em;
+  }
+  .main__us--facilities .swiper-pagination {
+    display: none;
+  }
+}
+.main__us--facts {
+  padding: 2em 1em;
+}
+.main__us--facts--info {
+  color: #777;
+  font-family: "Archivo";
+  font-size: 0.9em;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+.main__us--facts--title {
+  color: #222;
+  font-family: "Old Standard TT";
+  font-size: 3.5em;
+  font-weight: 400;
+  margin: 0.3em auto 0.5em;
+}
+.main__us--facts--elements--element {
+  display: flex;
+  margin-bottom: 3em;
+  justify-content: space-between;
+}
+.main__us--facts--elements--element--data--key {
+  color: #222;
+  font-family: "Old Standard TT";
+  font-size: 3.6em;
+  font-weight: 400;
+}
+.main__us--facts--elements--element--data--value {
+  color: #777;
+  font-family: "Roboto";
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1em;
+}
+.main__us--facts--slider--swiper {
+  width: 100%;
+  height: 200px;
+}
+.main__us--facts--slider--swiper--wrapper--slide--img {
+  width: 100%;
+}
+
+@media only screen and (min-width: 1000px) {
+  .main__us--facts {
+    margin: 5em 20%;
+  }
+  .main__us--facts--elements {
+    padding: 1em 3em;
+    display: flex;
+    justify-content: space-between;
+  }
+  .main__us--facts--slider {
+    width: 100%;
+    padding: 0 10% 5%;
+  }
+  .main__us--facts--slider--swiper--wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .main__us--facts--slider--swiper--wrapper--slide {
+    flex: 0 0 45%;
+    max-width: 45%;
+  }
+  .main__us--facts--slider--swiper--pagination {
+    display: none;
+  }
+}
+.main__rooms--intro {
+  padding: 2em 1em;
+  background-color: #333;
+}
+.main__rooms--intro--slogan {
+  color: #FFF;
+  font-family: "Archivo";
+  font-size: 0.8em;
+  font-weight: 700;
+  line-height: 1.1em;
+  letter-spacing: 0.2em;
+  margin-bottom: 1em;
+}
+.main__rooms--intro--title {
+  color: #FFF;
+  font-family: "Old Standard TT";
+  font-size: 3.5em;
+  font-weight: 400;
+}
+.main__rooms--intro--divider {
+  background-color: white;
+  padding: 0.5em;
+  width: fit-content;
+  color: #222;
+  font-family: "Archivo";
+  font-size: 1em;
+  font-weight: 700;
+  position: relative;
+  top: 2em;
+  right: -12em;
+}
+.main__rooms--intro--divider--gold {
+  color: #BEAD8E;
+}
+
+@media only screen and (min-width: 1000px) {
+  .main__rooms--intro {
+    padding: 5em 20% 3em;
+  }
+  .main__rooms--intro--divider {
+    top: 3em;
+    left: 90%;
+  }
+}
+.main__rooms--elements {
+  padding: 2em 1em;
+}
+.main__rooms--elements--element {
+  text-align: center;
+  margin-bottom: 3em;
+}
+.main__rooms--elements--element--image {
+  width: 100%;
+}
+.main__rooms--elements--element--info--icons {
+  position: relative;
+  bottom: 1em;
+  background: white;
+  width: fit-content;
+  margin: auto;
+  padding: 0.5em;
+  box-shadow: 0px 8px 16px 0px rgba(138, 138, 138, 0.05);
+}
+.main__rooms--elements--element--info--title {
+  color: #222;
+  font-family: "Old Standard TT";
+  font-size: 1.5em;
+  font-style: normal;
+  font-weight: 400;
+}
+.main__rooms--elements--element--info--desc {
+  color: #777;
+  font-family: "Roboto";
+  font-size: 0.9em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5em;
+  margin-bottom: 1em;
+}
+.main__rooms--elements--element--booking--price {
+  display: inline;
+  color: #BEAD8E;
+  font-family: "Archivo";
+  font-size: 1em;
+  font-weight: 700;
+}
+.main__rooms--elements--element--booking--book {
+  display: inline;
+  color: #BDBDBD;
+  font-family: "Archivo";
+  font-size: 1em;
+  font-weight: 700;
+  margin-left: 2em;
+}
+
+@media only screen and (min-width: 800px) {
+  .main__rooms--elements {
+    width: 70%;
+    margin: 0 15%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .main__rooms--elements--element {
+    text-align: center;
+    margin-bottom: 3em;
+    width: 20em;
+  }
+}
+@media only screen and (min-width: 1550px) {
+  .main__rooms--elements {
+    width: 70%;
+    margin: 0 15%;
+    display: flex;
+    flex-direction: column;
+  }
+  .main__rooms--elements--element {
+    margin-bottom: 3em;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+  .main__rooms--elements--element--image {
+    width: 20em;
+  }
+  .main__rooms--elements--element--info--icons {
+    margin: 0;
+    display: block;
+  }
+  .main__rooms--elements--element--info--desc {
+    width: 25em;
+  }
+  .main__rooms--elements--element--booking--price {
+    display: block;
+  }
+  .main__rooms--elements--element--booking--book {
+    display: block;
+    margin-left: 0;
+  }
+}
+.main__details--intro {
+  padding: 2em 1em;
+  background-color: #333;
+}
+.main__details--intro--slogan {
+  color: #FFF;
+  font-family: "Archivo";
+  font-size: 0.8em;
+  font-weight: 700;
+  line-height: 1.1em;
+  letter-spacing: 0.2em;
+  margin-bottom: 1em;
+}
+.main__details--intro--title {
+  color: #FFF;
+  font-family: "Old Standard TT";
+  font-size: 3.5em;
+  font-weight: 400;
+}
+.main__details--intro--divider {
+  background-color: white;
+  padding: 0.5em;
+  width: fit-content;
+  color: #222;
+  font-family: "Archivo";
+  font-size: 1em;
+  font-weight: 700;
+  position: relative;
+  top: 2em;
+  right: -10em;
+}
+.main__details--intro--divider--gold {
+  color: #BEAD8E;
+}
+
+@media only screen and (min-width: 1000px) {
+  .main__details--intro {
+    padding: 10em 20% 3em;
+  }
+  .main__details--intro--divider {
+    top: 3em;
+    left: 95%;
+  }
+}
+.main__details--room {
+  padding: 2em 1em;
+}
+.main__details--room--info--bed {
+  color: #777;
+  font-family: "Archivo";
+  font-size: 0.9em;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+.main__details--room--info--title {
+  color: #222;
+  font-family: "Old Standard TT";
+  font-size: 2.5em;
+  font-weight: 400;
+  line-height: 3em;
+}
+.main__details--room--info--price--number {
+  color: #BEAD8E;
+  font-family: "Archivo";
+  font-size: 2em;
+  font-weight: 700;
+}
+.main__details--room--info--price--night {
+  color: #BEAD8E;
+  font-family: "Archivo";
+  font-size: 0.9em;
+  font-weight: 700;
+}
+.main__details--room--image {
+  width: 100%;
+  margin: 2em 0;
+}
+.main__details--room--availability {
+  margin-bottom: 3em;
+}
+.main__details--room--availability--subtitle {
+  color: #222;
+  font-family: "Archivo";
+  font-size: 1.1em;
+  font-weight: 700;
+  margin: 1em;
+  text-align: center;
+}
+.main__details--room--availability--form {
+  display: flex;
+  flex-direction: column;
+}
+.main__details--room--availability--form--text {
+  font-family: "Archivo";
+  font-size: 0.9em;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+.main__details--room--availability--form--input {
+  margin-bottom: 1em;
+  border: none;
+  background-color: #F8F8F8;
+  color: #777;
+  font-family: "Archivo";
+  font-size: 0.9em;
+  font-weight: 400;
+  padding: 1.5em;
+  margin-right: 2em;
+}
+.main__details--room--availability--form--bt {
+  background-color: #BEAD8E;
+  padding: 1.5em 2em;
+  border: none;
+  color: white;
+  font-family: "Archivo";
+  font-size: 0.9em;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  margin-right: 2em;
+}
+.main__details--room--desc {
+  color: #777;
+  font-family: "Roboto";
+  font-size: 0.9em;
+  font-weight: 400;
+  line-height: 1.5em;
+}
+
+@media only screen and (min-width: 1000px) {
+  .main__details--room {
+    width: 80%;
+    margin: 0 10%;
+  }
+  .main__details--room--info {
+    display: inline-block;
+    padding: 1em 1em 0;
+    position: relative;
+    top: 2em;
+    width: 60%;
+    background-color: white;
+  }
+  .main__details--room--info--title {
+    display: inline;
+    margin-right: 1em;
+    line-height: normal;
+  }
+  .main__details--room--info--price {
+    display: inline;
+  }
+  .main__details--room--image {
+    width: 70%;
+    margin: 0;
+  }
+  .main__details--room--availability {
+    display: inline-block;
+    width: 20%;
+    margin-left: 3em;
+    position: absolute;
+  }
+  .main__details--room--availability--subtitle {
+    margin: 0 0 1em;
+  }
+  .main__details--room--availability--form--bt {
+    font-size: 0.7em;
+    padding: 1.5em 0.7em;
+  }
+  .main__details--room--desc {
+    width: 70%;
+    margin-top: 2em;
+  }
+}
+.main__details--room--amenities {
+  padding: 2em 1em;
+}
+.main__details--room--amenities--title {
+  color: #222;
+  font-family: "Old Standard TT";
+  font-size: 1.9em;
+  font-weight: 400;
+  line-height: 1.9em;
+}
+.main__details--room--amenities--separator {
+  margin-bottom: 2em;
+}
+.main__details--room--amenities--elements {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.main__details--room--amenities--elements--element {
+  color: #777;
+  font-family: "Roboto";
+  font-size: 0.9em;
+  font-weight: 500;
+  margin-bottom: 1em;
+}
+
+@media only screen and (min-width: 1000px) {
+  .main__details--room--amenities {
+    width: 70%;
+    margin: 0 10%;
+  }
+  .main__details--room--amenities--elements {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.main__details--room--person {
+  padding: 2em 1em;
+  text-align: center;
+}
+.main__details--room--person--face {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 1px solid black;
+  margin: 0 auto;
+}
+.main__details--room--person--face--img {
+  width: 100%;
+  height: auto;
+}
+.main__details--room--person--tick {
+  position: relative;
+  bottom: 12em;
+  left: 4.5em;
+}
+.main__details--room--person--name {
+  color: #222;
+  font-family: "Old Standard TT";
+  font-size: 1.9em;
+  font-weight: 400;
+}
+.main__details--room--person--occupation {
+  color: #BDAC8D;
+  font-family: "Archivo";
+  font-size: 0.9em;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin: 0.5em 0 1.5em;
+}
+.main__details--room--person--desc {
+  padding: 1em 1em;
+  color: #777;
+  font-family: "Archivo";
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.5em;
+}
+
+@media only screen and (min-width: 1000px) {
+  .main__details--room--person {
+    width: 21em;
+    margin-left: 10%;
+  }
+}
+.main__details--room--cancellation {
+  padding: 2em 1em;
+}
+.main__details--room--cancellation--title {
+  color: #222;
+  font-family: "Old Standard TT";
+  font-size: 1.9em;
+  font-weight: 400;
+  line-height: 1.9em;
+}
+.main__details--room--cancellation--separator {
+  margin-bottom: 2em;
+}
+.main__details--room--cancellation--desc {
+  color: #777;
+  font-family: "Roboto";
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.5em;
+}
+
+@media only screen and (min-width: 1000px) {
+  .main__details--room--cancellation {
+    width: 50%;
+    margin-left: 10%;
+  }
+  .main__details--room--cancellation--title {
+    margin-bottom: 1em;
+  }
+}
+.main__details--room--related {
+  padding: 2em 1em;
+}
+.main__details--room--related--title {
+  color: #222;
+  font-family: "Old Standard TT";
+  font-size: 1.9em;
+  font-weight: 400;
+  line-height: 1.9em;
+}
+.main__details--room--related--element {
+  text-align: center;
+  margin-bottom: 3em;
+}
+.main__details--room--related--element--slider {
+  padding: 2em 1em;
+}
+.main__details--room--related--element--slider--swiper {
+  width: 100%;
+  height: 200px;
+}
+.main__details--room--related--element--slider--swiper--wrapper--slide--img {
+  width: 100%;
+}
+.main__details--room--related--element--slider--swiper--button {
+  background-color: white;
+  width: 30px !important;
+  height: 30px !important;
+}
+.main__details--room--related--element--slider--swiper--button::after, .main__details--room--related--element--slider--swiper--button::before {
+  color: black;
+  font-size: 1em !important;
+}
+.main__details--room--related--element--slider--swiper--button:hover {
+  background-color: #BDAC8D;
+}
+.main__details--room--related--element--slider--swiper--button:hover::after, .main__details--room--related--element--slider--swiper--button:hover::before {
+  color: white;
+}
+.main__details--room--related--element--icons {
+  position: relative;
+  bottom: 3em;
+  z-index: 10;
+  background: white;
+  width: fit-content;
+  margin: auto;
+  padding: 0.5em;
+  box-shadow: 0px 8px 16px 0px rgba(138, 138, 138, 0.05);
+}
+.main__details--room--related--element--title {
+  color: #222;
+  font-family: "Old Standard TT";
+  font-size: 1.5em;
+  font-style: normal;
+  font-weight: 400;
+}
+.main__details--room--related--element--desc {
+  color: #777;
+  font-family: "Roboto";
+  font-size: 0.9em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5em;
+  margin-bottom: 1em;
+}
+.main__details--room--related--element--price {
+  display: inline;
+  color: #BEAD8E;
+  font-family: "Archivo";
+  font-size: 1em;
+  font-weight: 700;
+}
+.main__details--room--related--element--book {
+  display: inline;
+  color: #BDBDBD;
+  font-family: "Archivo";
+  font-size: 1em;
+  font-weight: 700;
+  margin-left: 2em;
+}
+
+@media only screen and (min-width: 1000px) {
+  .main__details--room--related {
+    width: 50%;
+    margin-left: 10%;
+  }
+  .main__details--room--related--separator {
+    width: 70%;
+  }
+  .main__details--room--related--element {
+    width: 21em;
+  }
+}
+.main__offers--intro {
+  padding: 2em 1em;
+  background-color: #333;
+}
+.main__offers--intro--slogan {
+  color: #FFF;
+  font-family: "Archivo";
+  font-size: 0.8em;
+  font-weight: 700;
+  line-height: 1.1em;
+  letter-spacing: 0.2em;
+  margin-bottom: 1em;
+}
+.main__offers--intro--title {
+  color: #FFF;
+  font-family: "Old Standard TT";
+  font-size: 3.5em;
+  font-weight: 400;
+}
+.main__offers--intro--divider {
+  background-color: white;
+  padding: 0.5em;
+  width: fit-content;
+  color: #222;
+  font-family: "Archivo";
+  font-size: 1em;
+  font-weight: 700;
+  position: relative;
+  top: 2em;
+  right: -10em;
+}
+.main__offers--intro--divider--gold {
+  color: #BEAD8E;
+}
+
+@media only screen and (min-width: 1000px) {
+  .main__offers--intro {
+    padding: 8em 20% 2em;
+  }
+  .main__offers--intro--divider {
+    top: 2em;
+    left: 95%;
+  }
+}
+.main__offers--elements {
+  padding: 2em 1em;
+}
+.main__offers--elements--room {
+  margin-bottom: 2em;
+  box-shadow: 0px 14px 24px 0px rgba(184, 184, 184, 0.1);
+}
+.main__offers--elements--room--image {
+  width: 100%;
+}
+.main__offers--elements--room--prices {
+  width: fit-content;
+  position: relative;
+  bottom: 5em;
+  float: right;
+  margin-right: 2em;
+}
+.main__offers--elements--room--prices--price-old {
+  color: #BEAD8E;
+  font-family: "Archivo";
+  font-size: 1.4em;
+  font-weight: 700;
+  text-decoration-line: line-through;
+}
+.main__offers--elements--room--prices--price-old--night {
+  font-size: 0.5em;
+  text-decoration-line: line-through;
+}
+.main__offers--elements--room--prices--price-new {
+  color: #DE5777;
+  font-family: "Archivo";
+  font-size: 1.9em;
+  font-weight: 700;
+}
+.main__offers--elements--room--prices--price-new--night {
+  font-size: 0.6em;
+}
+.main__offers--elements--room--data {
+  padding: 0 1em;
+}
+.main__offers--elements--room--data--info {
+  color: #777;
+  font-family: "Archivo";
+  font-size: 0.9em;
+  font-weight: 700;
+}
+.main__offers--elements--room--data--title {
+  color: #222;
+  font-family: "Old Standard TT";
+  font-size: 2.5em;
+  font-weight: 400;
+}
+.main__offers--elements--room--data--separator {
+  display: none;
+}
+.main__offers--elements--room--data--content--desc {
+  margin: 1em 0;
+  color: #777;
+  font-family: "Roboto";
+  font-size: 0.9em;
+  font-weight: 400;
+  line-height: 1.8em;
+}
+.main__offers--elements--room--data--content--amenities {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.main__offers--elements--room--data--content--amenities--element {
+  margin-top: 1em;
+  color: #777;
+  font-family: "Roboto";
+  font-size: 0.9em;
+  font-weight: 500;
+}
+.main__offers--elements--room--data--bt {
+  margin: 2em auto;
+  background-color: #BEAD8E;
+  padding: 1.5em 2em;
+  width: 60%;
+  border: none;
+  color: white;
+}
+
+@media only screen and (min-width: 1000px) {
+  .main__offers--elements {
+    margin: 0 20%;
+  }
+  .main__offers--elements--room--prices {
+    z-index: 10;
+    right: 3em;
+    margin-left: 2em;
+    bottom: 6em;
+  }
+  .main__offers--elements--room--image {
+    height: 30em;
+  }
+  .main__offers--elements--room--data {
+    margin: 0 4em;
+    padding: 2em 2em 0;
+    position: relative;
+    bottom: 8em;
+    background-color: white;
+    border-top: 5px solid #BDAC8D;
+  }
+  .main__offers--elements--room--data--separator {
+    display: block;
+  }
+  .main__offers--elements--room--data--content {
+    display: flex;
+    justify-content: space-between;
+  }
+  .main__offers--elements--room--data--content--desc {
+    width: 45%;
+  }
+  .main__offers--elements--room--data--content--amenities {
+    width: 40%;
+  }
+  .main__offers--elements--room--data--bt {
+    width: auto;
+    padding: 1.5em 4em;
+  }
+}
+.main__offers--popular {
+  padding: 2em 1em;
+  background-color: #222;
+  text-align: center;
+}
+.main__offers--popular--info {
+  color: #BDAC8D;
+  font-family: "Archivo";
+  font-size: 0.9em;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+}
+.main__offers--popular--title {
+  color: #FFF;
+  font-family: "Old Standard TT";
+  font-size: 2.5em;
+  font-weight: 400;
+  line-height: 3em;
+}
+.main__offers--popular--room {
+  text-align: center;
+  margin-bottom: 3em;
+  background-color: white;
+  padding-bottom: 2em;
+}
+.main__offers--popular--room--slider--swiper {
+  width: 100%;
+  height: 200px;
+}
+.main__offers--popular--room--slider--swiper--wrapper--slide--img {
+  width: 100%;
+}
+.main__offers--popular--room--slider--swiper--button {
+  background-color: white;
+  width: 30px !important;
+  height: 30px !important;
+}
+.main__offers--popular--room--slider--swiper--button::after, .main__offers--popular--room--slider--swiper--button::before {
+  color: black;
+  font-size: 1em !important;
+}
+.main__offers--popular--room--slider--swiper--button:hover {
+  background-color: #BDAC8D;
+}
+.main__offers--popular--room--slider--swiper--button:hover::after, .main__offers--popular--room--slider--swiper--button:hover::before {
+  color: white;
+}
+.main__offers--popular--room--image {
+  width: 100%;
+}
+.main__offers--popular--room--icons {
+  position: relative;
+  bottom: 1em;
+  z-index: 10;
+  background: white;
+  width: fit-content;
+  margin: auto;
+  padding: 0.5em;
+  box-shadow: 0px 8px 16px 0px rgba(138, 138, 138, 0.05);
+}
+.main__offers--popular--room--title {
+  color: #222;
+  font-family: "Old Standard TT";
+  font-size: 1.5em;
+  font-style: normal;
+  font-weight: 400;
+}
+.main__offers--popular--room--desc {
+  color: #777;
+  font-family: "Roboto";
+  font-size: 0.9em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5em;
+  margin-bottom: 1em;
+  padding: 1em;
+}
+.main__offers--popular--room--price {
+  display: inline;
+  color: #BEAD8E;
+  font-family: "Archivo";
+  font-size: 1em;
+  font-weight: 700;
+}
+.main__offers--popular--room--book {
+  display: inline;
+  color: #BDBDBD;
+  font-family: "Archivo";
+  font-size: 1em;
+  font-weight: 700;
+  margin-left: 2em;
+}
+
+@media only screen and (min-width: 1000px) {
+  .main__offers--popular--room {
+    width: 21em;
+    margin: 5% auto;
+  }
+}
+.main__contact--intro {
+  padding: 2em 1em;
+  background-color: #333;
+  margin-bottom: 2em;
+}
+.main__contact--intro--slogan {
+  color: #FFF;
+  font-family: "Archivo";
+  font-size: 0.8em;
+  font-weight: 700;
+  line-height: 1.1em;
+  letter-spacing: 0.2em;
+  margin-bottom: 1em;
+}
+.main__contact--intro--title {
+  color: #FFF;
+  font-family: "Old Standard TT";
+  font-size: 3.5em;
+  font-weight: 400;
+}
+.main__contact--intro--divider {
+  background-color: white;
+  padding: 1.5em;
+  width: fit-content;
+  color: #222;
+  font-family: "Archivo";
+  font-size: 1em;
+  font-weight: 700;
+  position: relative;
+  top: 3em;
+  left: 60%;
+}
+.main__contact--intro--divider--gold {
+  color: #BEAD8E;
+}
+
+@media only screen and (min-width: 1000px) {
+  .main__contact--intro {
+    padding: 10em 20% 0;
+  }
+  .main__contact--intro--divider {
+    top: 0;
+    left: 95%;
+  }
+}
+.main__contact--forms {
+  padding: 2em 1em;
+}
+.main__contact--forms--element {
+  display: flex;
+}
+.main__contact--forms--element--icon {
+  align-self: flex-start;
+}
+.main__contact--forms--element--data {
+  margin-left: 1em;
+  position: absolute;
+  left: 5em;
+}
+.main__contact--forms--element--data--key {
+  color: #222;
+  font-family: "Old Standard TT";
+  font-size: 1.2em;
+  font-weight: 400;
+  line-height: 1.5em;
+  margin-bottom: 1em;
+}
+.main__contact--forms--element--data--value {
+  color: #777;
+  font-family: "Roboto";
+  font-size: 0.9em;
+  font-weight: 400;
+}
+.main__contact--forms--element--number {
+  color: #F8F8F8;
+  font-family: "Roboto";
+  font-size: 200px;
+  font-weight: 700;
+  position: relative;
+  right: -0.4em;
+  bottom: 0.3em;
+}
+
+@media only screen and (min-width: 1000px) {
+  .main__contact--forms {
+    width: 80%;
+    margin: 0 10%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .main__contact--forms--element--icon {
+    align-self: flex-start;
+  }
+  .main__contact--forms--element--data {
+    position: relative;
+    left: -13em;
+  }
+  .main__contact--forms--element--data--key {
+    color: #222;
+    font-family: "Old Standard TT";
+    font-size: 1.2em;
+    font-weight: 400;
+    line-height: 1.5em;
+    margin-bottom: 1em;
+  }
+  .main__contact--forms--element--data--value {
+    color: #777;
+    font-family: "Roboto";
+    font-size: 0.9em;
+    font-weight: 400;
+  }
+}
+.main__contact--map {
+  width: calc(100% - 2em);
+  margin: 1em;
+  height: auto;
+  border: 0;
+}
+
+@media only screen and (min-width: 1000px) {
+  .main__contact--map {
+    width: 80%;
+    margin: 0 10%;
+    height: 50em;
+    border: 0;
+  }
+}
+.main__contact--data {
+  display: flex;
+  flex-direction: column;
+  padding: 2em 1em;
+  justify-content: space-around;
+}
+.main__contact--data--element {
+  margin-bottom: 1em;
+  border: none;
+  background-color: #F8F8F8;
+  color: #777;
+  font-family: "Archivo";
+  font-size: 0.9em;
+  font-weight: 400;
+  padding: 1.5em;
+}
+.main__contact--data--element--textarea {
+  margin-bottom: 1em;
+  border: none;
+  background-color: #F8F8F8;
+  color: #777;
+  font-family: "Archivo";
+  font-size: 0.9em;
+  font-weight: 400;
+  padding: 1.5em;
+}
+.main__contact--data--send {
+  background-color: #BEAD8E;
+  color: white;
+  padding: 1em 2em;
+  border: none;
+  font-family: "Roboto";
+  font-size: 1em;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  margin: 0 2em;
+}
+
+@media only screen and (min-width: 1000px) {
+  .main__contact--data {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    gap: 2em;
+    margin: auto 25%;
+  }
+  .main__contact--data--element {
+    margin: 0;
+    grid-row: span 1;
+  }
+  .main__contact--data--element--textarea {
+    grid-column: span 2;
+  }
+  .main__contact--data--send {
+    grid-column: span 2;
+    width: 25%;
+    margin: auto;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

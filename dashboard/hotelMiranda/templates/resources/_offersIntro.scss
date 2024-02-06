@@ -1,0 +1,51 @@
+.main__offers--intro{
+    padding: 2em 1em;
+    background-color: #333;
+
+    &--slogan{
+        color: #FFF;
+        font-family: 'Archivo';
+        font-size: .8em;
+        font-weight: 700;
+        line-height: 1.1em;
+        letter-spacing: .2em;
+        margin-bottom: 1em;
+    }
+
+    &--title{
+        color: #FFF;
+        font-family: 'Old Standard TT';
+        font-size: 3.5em;
+        font-weight: 400;
+    }
+
+    &--divider{
+        background-color: white;
+        padding: .5em;
+        width: fit-content;
+        color: #222;
+        font-family: 'Archivo';
+        font-size: 1em;
+        font-weight: 700;
+
+        position: relative;
+        top: 2em;
+        right: -10em;
+
+        &--gold{
+            color: #BEAD8E;
+        }
+    }
+}
+
+
+@media only screen and (min-width: 1000px){
+    .main__offers--intro{
+        padding: 8em 20% 2em;
+
+        &--divider{
+            top: 2em;
+            left: 95%;
+        }
+    }
+}

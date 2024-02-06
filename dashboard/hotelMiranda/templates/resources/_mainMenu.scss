@@ -1,0 +1,112 @@
+.main__menu{
+    padding: 2em 1em;
+
+    &--donut{
+        position: absolute;
+        right: 0;
+    }
+
+    &--info{
+        color: #777;
+        font-family: 'Archivo';
+        font-size: .9em;
+        font-weight: 700;
+        letter-spacing: .2em;
+        padding-top: 10em;
+    }
+
+    &--title{
+        color: #222;
+        font-family: 'Old Standard TT';
+        font-size: 3.5em;
+        font-style: normal;
+        font-weight: 400;
+    }
+
+    &--swiper{
+        padding: 2em 1em;
+        width: 100%;
+        
+          &--wrapper {
+            &--slide {
+                &--food{
+                    display: flex;
+                    align-items:center;
+                    margin-bottom: 1em;
+            
+                    &--img{
+                        width: 120px;
+                        height: 120px;
+                        margin-right: .5em;
+                    }
+                    &--text{
+                        &--title{
+                            color: #222;
+                            font-family:'Old Standard TT';
+                            font-size: 1.5em;
+                            font-weight: 400;
+                            line-height: 1.5em;
+                        }
+            
+                        &--desc{
+                            color: #222;
+                            font-family: 'Roboto';
+                            font-size: .9em;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 1.5em;
+                        }
+                    }
+            
+            
+                }
+            }
+      
+            &--button{
+              background-color: white;
+              width: 30px !important;
+              height: 30px !important;
+      
+              &::after,
+              &::before{
+                color: black;
+                font-size: 1em !important;
+              }
+      
+              
+              &:hover{
+                background-color: #BDAC8D;
+      
+                &::after,
+                &::before{
+                  color: white;
+                }
+              }
+            }
+          }
+      
+        &--pagination{
+            .swiper-pagination-bullet-active {
+              background-color: #BEAD8E;
+            }
+        }
+    }
+}
+    
+
+@media only screen and (min-width: 1000px){
+    .main__menu{
+        width: 100%;
+        padding: 5% 15%;
+
+        &--swiper{
+            &--wrapper{
+                display: flex;
+                justify-content: space-between;
+                &--slide{
+                    flex: 0 0 45%;
+                }
+            }
+        }
+    }
+}

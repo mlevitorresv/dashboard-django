@@ -1,0 +1,39 @@
+.main__details--room--amenities{
+    padding: 2em 1em;
+    
+    &--title{
+        color: #222;
+        font-family: 'Old Standard TT';
+        font-size: 1.9em;
+        font-weight: 400;
+        line-height: 1.9em;
+    }
+
+    &--separator{
+        margin-bottom: 2em;
+    }
+
+    &--elements{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        &--element{
+            color: #777;
+            font-family: 'Roboto';
+            font-size: .9em;
+            font-weight: 500;
+            margin-bottom: 1em;
+        }
+    }
+}
+
+@media only screen and (min-width: 1000px){
+    .main__details--room--amenities{
+        width: 70%;
+        margin: 0 10%;
+
+        &--elements{
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}

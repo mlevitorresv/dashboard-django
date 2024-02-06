@@ -1,0 +1,31 @@
+.main__us--customer{
+    padding: 1em 1em;
+
+    &--title{
+        color: #222;
+        font-family: 'Old Standard TT';
+        font-size: 2em;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -1.16px;
+        text-align: center;
+    }
+
+    &--adventages{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+
+@media only screen and (min-width:100px) {
+
+    .main__us--customer{
+        margin: 0 20%;
+        &--title{
+            font-size: 4.5em;
+            margin-bottom: 1em;
+        }
+    }
+}

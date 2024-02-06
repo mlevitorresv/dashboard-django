@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@100;200;300;400;500;600;700;800;900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-width: 320px;
+}
+
+
+@import "./header";
+@import "./mainInfo";
+@import "./mainAvailability";
+@import "./mainAbout";
+@import "./mainVideo";
+@import "./mainFacilities";
+@import "./mainMenu";
+@import "./mainSlider";
+@import "./mainData";
+@import "./footer";
+@import "./mainUsIntro";
+@import "./mainUsVideo";
+@import "./mainUsCustomer";
+@import "./mainUsRestaurant";
+@import "./mainUsFacilities";
+@import "./mainUsFacts";
+@import "./roomsIntro";
+@import "./roomsElements";
+@import "./detailsIntro";
+@import "./detailsRoom";
+@import "./detailsAmenities";
+@import "./detailsPerson";
+@import "./detailsCancellation";
+@import "./detailsRelated";
+@import "./offersIntro";
+@import "./offersElements";
+@import "./offersPopular";
+@import "./contactIntro";
+@import "./contactForms";
+@import "./contactMap";
+@import "./contactData";

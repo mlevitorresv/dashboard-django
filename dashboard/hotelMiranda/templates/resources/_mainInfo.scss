@@ -1,0 +1,77 @@
+.main__info{
+    background-color: #333;
+    color: white;
+    padding: 3em 1em;
+
+    &--slogan{
+        width: 60%;
+        font-family: 'Archivo';
+        font-size: .7em;
+        font-weight: 700;
+        line-height: 1.2em;
+        letter-spacing: .1em;
+        margin-bottom: 2em;
+    }
+
+    &--title{
+        font-family: 'Old Standard TT';
+        font-size: 3.5em;
+        font-weight: 400;
+        margin-bottom: .5em;
+    }
+
+    &--bt{
+        padding-top: 1.5em;
+        padding-bottom: 1.5em;
+        width: 50%;
+        display: block;
+        color: white;
+    }
+
+    &--btTour{
+        background-color: #BEAD8E;
+        border: none;
+        margin-bottom: 2em;
+    }
+
+    &--btLearn{
+        background-color: #222;
+        border: 2px solid rgba(255, 255, 255, 0.33);
+        margin-bottom: 2em;
+    }
+}
+
+
+@media only screen and (min-width: 1000px){
+
+    .main__info{
+        padding: 7em 20em 5em;
+
+        &--slogan{
+            font-family: 'Archivo';
+            font-size: .9em;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: .2em;
+            margin-bottom: 2em;
+        }
+
+        &--title{
+            font-family: 'Old Standard TT';
+            font-size: 7.5em;
+            font-weight: 400;
+            margin-bottom: .2em;
+            width: 60%;
+        }
+
+        &--bt{
+            padding-top: 1.5em;
+            padding-bottom: 1.5em;
+            width: 17%;
+            display: inline-block;
+            color: white;
+            margin: 0 1em;
+        }
+    }
+
+}

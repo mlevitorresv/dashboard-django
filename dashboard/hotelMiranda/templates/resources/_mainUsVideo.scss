@@ -1,0 +1,18 @@
+.main__us--video{
+    margin: 2em 1em;
+
+    &--repro{
+        width: 100%;
+    }
+}
+
+
+@media only screen and (min-width: 1000px){
+    .main__us--video{
+        margin: 10em 20%;
+
+        &--repro{
+            height: 40em;
+        }
+    }
+}

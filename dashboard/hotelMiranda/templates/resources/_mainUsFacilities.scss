@@ -1,0 +1,91 @@
+.main__us--facilities{
+    background-color: #222;
+    padding: 2em 1em;
+    text-align: center;
+    
+    &--info{
+        color: #FFF;
+        font-family: 'Archivo';
+        font-size: .9em;
+        font-weight: 700;
+        letter-spacing: .2em;
+        margin: 1em auto;
+    }
+
+    &--title{
+        color: #FFF;
+        font-family: 'Old Standard TT';
+        font-size: 3.5em;
+        font-weight: 400;
+    }
+
+    &--content{
+        background-color: #292929;
+        text-align: left;
+        padding: 1em 1em 2em;
+        &--rating{
+            float: right;
+            color: #222;
+            font-family: 'Archivo';
+            font-size: 7.5em;
+            font-weight: 700;
+        }
+    
+        &--rating--icon{
+            position: relative;
+            top: 5em;
+            margin-bottom: 6em;
+        }   
+    
+        &--subtitle{
+            color: #FFF;
+            font-family: 'Old Standard TT';
+            font-size: 1.9em;
+            font-weight: 400;
+            line-height: 1.9em;
+        }
+    
+        &--desc{
+            color: #FFF;
+            font-family: 'Archivo';
+            font-size: .9em;
+            font-weight: 400;
+            line-height: 1.5em;
+            width: 80%;
+        }
+    }    
+
+    .swiper {  
+        &-pagination{
+            position: initial;
+        }
+        .swiper-pagination-bullet-active {
+          background-color: #BEAD8E;
+        }
+    }
+}
+
+
+@media only screen and (min-width: 1000px){
+    .main__us--facilities{
+        width: 100%;
+        padding: 5% 15%;
+
+        .swiper {          
+            &-wrapper{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1em;
+
+            }
+
+            &-slide{
+                max-width: 21em;
+            }
+            
+            &-pagination{            
+                display: none;
+            }
+        }
+    }
+}

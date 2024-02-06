@@ -1,0 +1,177 @@
+.footer{
+    margin-top: 2em;
+    padding-top: 2em;
+    background: url('../media/footer.png'), rgb(255, 255, 255) 0px 0px / 512% 99.174% no-repeat;
+
+    &__us{
+        &--logo{
+            margin-left: 1em;
+            display: flex;
+            align-items: center;
+            &--H{
+                display: inline-block;
+                background-color: #BEAD8E;
+                box-shadow: 0px 14px 24px 0px rgba(139, 139, 139, 0.15);
+                color: #FFF;
+                font-family: 'Archivo';
+                font-size: 2.5em;
+                font-weight: 700;
+                padding: .3em;
+            }
+    
+            &--name{
+                display: inline-block;
+                color: #111;
+                font-family: 'Archivo';
+                font-size: 1.5em;
+                font-weight: 400;
+                margin-left: 1em;
+    
+                &--strong{
+                    font-weight: 700;
+                }
+            }
+        }
+    
+        &--desc{
+            margin-left: 1em;
+            margin-top: 1em;
+            color: #777;
+            font-family: 'Archivo';
+            font-size: 1em;
+            font-weight: 400;
+            line-height: 1.6em;
+        }
+
+        &--social{
+            margin-left: 1em;
+            margin-top: 1em;
+            display: flex;
+    
+            &--element{
+                margin: .5em;
+                padding: .5em;
+                background-color: white;
+    
+                &:hover{
+                    background-color: #BEAD8E;
+                    &--icon{
+                        fill: white;
+                    }
+                }
+            }
+        }
+    }
+
+    &__services{
+        margin-left: 1em;
+        margin-top: 1em;
+        &--title{
+            color: #222;
+            font-family: 'Old Standard TT';
+            font-size: 1.5em;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1.5em;
+        }
+        &--elements{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+
+            &--element{
+                color: #777;
+                font-family: 'Roboto';
+                font-size: 1em;
+                font-weight: 400;
+                line-height: 3em;
+            }
+        }
+    }
+
+    &__contact{
+        margin-left: 1em;
+        margin-top: 1em;
+        
+        &--title{
+            color: #222;
+            font-family: 'Old Standard TT';
+            font-size: 1.5em;
+            font-weight: 400;
+            line-height: 1.5em;
+            margin-bottom: 1em;
+        }
+
+        &--element{
+            display: flex;
+            margin-bottom: 3em;
+
+            &--data{
+                margin-left: 1em;
+                &--key{
+                    color: #222;
+                    font-family: 'Old Standard TT';
+                    font-size: 1.3em;
+                    font-weight: 400;
+                    line-height: 1.5em;
+                }
+                &--value{
+                    color: #777;
+                    font-family: 'Roboto';
+                    font-size: .9em;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+
+.footer__end{
+    background-color: #F8F8F8;
+    padding: 1em;
+
+    &--copy{
+        color: #222;
+        font-family: 'Roboto';
+        font-size: 1em;
+        font-weight: 700;
+        margin-bottom: 1em;
+    }
+
+    &--terms{
+        color: #222;
+        font-family: 'Roboto';
+        font-size: 1em;
+        font-weight: 700;
+    }
+}
+
+
+@media only screen and (min-width: 1000px){
+    .footer{
+        display: flex;
+        justify-content: center;
+       
+        &__us{
+            width: 17em;
+        }
+        &__services{
+            margin-left: 7em;
+            &--elements{
+                &--element{
+                    margin-right: 7em;
+                }
+            }
+        }
+    }
+
+    .footer__end{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 2em;
+
+        &--copy{
+            margin-bottom: 0em;
+        }
+    }
+}
