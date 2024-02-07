@@ -28,6 +28,18 @@ def view_rooms(request):
 def view_room_id(request, room_id):
     data = Rooms.objects.get(id=room_id)
     
-    result = f'ID: {data.id}, Number: {data.number}, photo: {data.photo}, type: {data.type}, bed: {data.bed}, amenities: {data.amenities}, description: {data.description}, rate: {data.rate}, price: {data.price}, discount: {data.discount}, available: {data.available}'
+    result = {
+        'id': data.id,
+        'Number': data.number, 
+        'photo': data.photo,
+        'type': data.type,
+        'bed': data.bed,
+        'amenities': data.amenities,
+        'description': data.description,
+        'rate': data.rate,
+        'price': data.price,
+        'discount': data.discount,
+        'available': data.available
+    }
     
-    return HttpResponse(f'Room by id: {result}')
+    return render(request, 'roomDetails.html', {'room': result})
