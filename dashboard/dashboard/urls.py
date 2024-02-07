@@ -20,6 +20,8 @@ from django.views.generic import TemplateView
 from hotelMiranda.views import contactsViews, roomsViews, bookingViews
 
 urlpatterns = [
+    path('admin/', admin.site.urls),
+    
     path('', TemplateView.as_view(template_name='index.html'), name='index'),
     # path('rooms/', TemplateView.as_view(template_name='rooms.html'), name='rooms'),
     path('rooms/', roomsViews.view_rooms, name='rooms'),
@@ -29,7 +31,6 @@ urlpatterns = [
     path('contact/', TemplateView.as_view(template_name='contact.html'), name='contact'),
     path('about/', TemplateView.as_view(template_name='about.html'), name='about'),
     
-    # path('admin/', admin.site.urls),
     
     
     # path('rooms/<int:room_id>', roomsViews.view_room_id, name='room'),
