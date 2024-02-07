@@ -66,11 +66,11 @@
                         <img src="{% static 'media/iconNoSmoke.png' %}" alt="a no smoke icon" />
                         <img src="{% static 'media/iconCocktail.png' %}" alt="a cocktail icon" />
                     </div>
-                    <h3 class="main__rooms--elements--element--info--title">Minimal Duplex Room</h3>
-                    <p class="main__rooms--elements--element--info--desc">Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</p>
+                    <h3 class="main__rooms--elements--element--info--title">{{room.type}}</h3>
+                    <p class="main__rooms--elements--element--info--desc">{{room.description}}</p>
                 </div>
                 <div class="main__rooms--elements--element--booking">
-                    <p class="main__rooms--elements--element--booking--price">$345/Night</p>
+                    <p class="main__rooms--elements--element--booking--price">${{room.price}}/Night</p>
                     <p class="main__rooms--elements--element--booking--book">Book now</p>
                 </div>
             </div>
