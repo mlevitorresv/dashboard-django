@@ -56,20 +56,23 @@
             <p class="main__offers--intro--divider">Home | <span class="main__details--intro--divider--gold">Offers</span></p>
         </div>
 
+
+        {% for room in rooms %}
+
         <div class="main__offers--elements">
             <div class="main__offers--elements--room">
-                <img src="{% static 'media/room.jpg' %}" alt="a room of hotel" class="main__offers--elements--room--image">
+                <img src="{{room.photo}}" alt="a room of hotel" class="main__offers--elements--room--image">
                 <div class="main__offers--elements--room--prices">
-                    <p class="main__offers--elements--room--prices--price-old">$500<span class="main__offers--elements--room--prices--price-old--night">/Night</span></p>
-                    <p class="main__offers--elements--room--prices--price-new">$350<span class="main__offers--elements--room--prices--price-new--night">/Night</span></p>
+                    <p class="main__offers--elements--room--prices--price-old">${{room.price}}<span class="main__offers--elements--room--prices--price-old--night">/Night</span></p>
+                    <p class="main__offers--elements--room--prices--price-new">${{room.final_price}}<span class="main__offers--elements--room--prices--price-new--night">/Night</span></p>
                 </div>
                 <div class="main__offers--elements--room--data">
-                    <p class="main__offers--elements--room--data--info">DOUBLE BED</p>
-                    <h1 class="main__offers--elements--room--data--title">Luxury Double Bed</h1>
+                    <p class="main__offers--elements--room--data--info">{{room.bed}}</p>
+                    <h1 class="main__offers--elements--room--data--title">{{room.type}}</h1>
                     <hr class="main__offers--elements--room--data--separator">
                     <div class="main__offers--elements--room--data--content">
                         <p class="main__offers--elements--room--data--content--desc">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend erit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            {{room.description}}
                         </p>
                         <div class="main__offers--elements--room--data--content--amenities">
                             <p class="main__offers--elements--room--data--content--amenities--element">
@@ -119,196 +122,9 @@
                 </div>
             </div>
         </div>
-        <div class="main__offers--elements">
-            <div class="main__offers--elements--room">
-                <img src="{% static 'media/room.jpg' %}" alt="a room of hotel" class="main__offers--elements--room--image">
-                <div class="main__offers--elements--room--prices">
-                    <p class="main__offers--elements--room--prices--price-old">$500<span class="main__offers--elements--room--prices--price-old--night">/Night</span></p>
-                    <p class="main__offers--elements--room--prices--price-new">$350<span class="main__offers--elements--room--prices--price-new--night">/Night</span></p>
-                </div>
-                <div class="main__offers--elements--room--data">
-                    <p class="main__offers--elements--room--data--info">DOUBLE BED</p>
-                    <h1 class="main__offers--elements--room--data--title">Luxury Double Bed</h1>
-                    <hr class="main__offers--elements--room--data--separator">
-                    <div class="main__offers--elements--room--data--content">
-                        <p class="main__offers--elements--room--data--content--desc">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend erit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        </p>
-                        <div class="main__offers--elements--room--data--content--amenities">
-                            <p class="main__offers--elements--room--data--content--amenities--element">
-                                <img src="{% static 'media/airConditioner.svg' %}" alt="air conditioner svg" class="main__offers--elements--room--data--content--amenities--element--img">
-                                Air conditioner
-                            </p>
-                            <p class="main__offers--elements--room--data--content--amenities--element">
-                                <img src="{% static 'media/smallBreakfast.svg' %}" alt="breakfast svg" class="main__offers--elements--room--data--content--amenities--element--img">
-                                Breakfast
-                            </p>
-                            <p class="main__offers--elements--room--data--content--amenities--element">
-                                <img src="{% static 'media/cleaning.svg' %}" alt="cleaning svg" class="main__offers--elements--room--data--content--amenities--element--img">
-                                Cleaning
-                            </p>
-                            <p class="main__offers--elements--room--data--content--amenities--element">
-                                <img src="{% static 'media/grocery.svg' %}" alt="grocery svg" class="main__offers--elements--room--data--content--amenities--element--img">
-                                Grocery
-                            </p>
-                            <p class="main__offers--elements--room--data--content--amenities--element">
-                                <img src="{% static 'media/shopNear.svg' %}" alt="shop svg" class="main__offers--elements--room--data--content--amenities--element--img">
-                                Shop Near
-                            </p>
-                            <p class="main__offers--elements--room--data--content--amenities--element">
-                                <img src="{% static 'media/wifi.svg' %}" alt="wifi svg" class="main__offers--elements--room--data--content--amenities--element--img">
-                                High speed WiFi
-                            </p>
-                            <p class="main__offers--elements--room--data--content--amenities--element">
-                                <img src="{% static 'media/kitchen.svg' %}" alt="kitchen svg" class="main__offers--elements--room--data--content--amenities--element--img">
-                                Kitchen
-                            </p>
-                            <p class="main__offers--elements--room--data--content--amenities--element">
-                                <img src="{% static 'media/shower.svg' %}" alt="shower svg" class="main__offers--elements--room--data--content--amenities--element--img">
-                                Shower
-                            </p>
-                            <p class="main__offers--elements--room--data--content--amenities--element">
-                                <img src="{% static 'media/singleBed.svg' %}" alt="a bed svg" class="main__offers--elements--room--data--content--amenities--element--img">
-                                Single bed
-                            </p>
-                            <p class="main__offers--elements--room--data--content--amenities--element">
-                                <img src="{% static 'media/towels.svg' %}" alt="towel svg" class="main__offers--elements--room--data--content--amenities--element--img">
-                                Towels
-                            </p>
-                        </div>        
-                    </div>
-                                
-                    <button class="main__offers--elements--room--data--bt" onclick="location.href='./roomDetails.html'">BOOK NOW</button>
-                </div>
-            </div>
-        </div>
-        <div class="main__offers--elements">
-            <div class="main__offers--elements--room">
-                <img src="{% static 'media/room.jpg' %}" alt="a room of hotel" class="main__offers--elements--room--image">
-                <div class="main__offers--elements--room--prices">
-                    <p class="main__offers--elements--room--prices--price-old">$500<span class="main__offers--elements--room--prices--price-old--night">/Night</span></p>
-                    <p class="main__offers--elements--room--prices--price-new">$350<span class="main__offers--elements--room--prices--price-new--night">/Night</span></p>
-                </div>
-                <div class="main__offers--elements--room--data">
-                    <p class="main__offers--elements--room--data--info">DOUBLE BED</p>
-                    <h1 class="main__offers--elements--room--data--title">Luxury Double Bed</h1>
-                    <hr class="main__offers--elements--room--data--separator">
-                    <div class="main__offers--elements--room--data--content">
-                        <p class="main__offers--elements--room--data--content--desc">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend erit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        </p>
-                        <div class="main__offers--elements--room--data--content--amenities">
-                            <p class="main__offers--elements--room--data--content--amenities--element">
-                                <img src="{% static 'media/airConditioner.svg' %}" alt="air conditioner svg" class="main__offers--elements--room--data--content--amenities--element--img">
-                                Air conditioner
-                            </p>
-                            <p class="main__offers--elements--room--data--content--amenities--element">
-                                <img src="{% static 'media/smallBreakfast.svg' %}" alt="breakfast svg" class="main__offers--elements--room--data--content--amenities--element--img">
-                                Breakfast
-                            </p>
-                            <p class="main__offers--elements--room--data--content--amenities--element">
-                                <img src="{% static 'media/cleaning.svg' %}" alt="cleaning svg" class="main__offers--elements--room--data--content--amenities--element--img">
-                                Cleaning
-                            </p>
-                            <p class="main__offers--elements--room--data--content--amenities--element">
-                                <img src="{% static 'media/grocery.svg' %}" alt="grocery svg" class="main__offers--elements--room--data--content--amenities--element--img">
-                                Grocery
-                            </p>
-                            <p class="main__offers--elements--room--data--content--amenities--element">
-                                <img src="{% static 'media/shopNear.svg' %}" alt="shop svg" class="main__offers--elements--room--data--content--amenities--element--img">
-                                Shop Near
-                            </p>
-                            <p class="main__offers--elements--room--data--content--amenities--element">
-                                <img src="{% static 'media/wifi.svg' %}" alt="wifi svg" class="main__offers--elements--room--data--content--amenities--element--img">
-                                High speed WiFi
-                            </p>
-                            <p class="main__offers--elements--room--data--content--amenities--element">
-                                <img src="{% static 'media/kitchen.svg' %}" alt="kitchen svg" class="main__offers--elements--room--data--content--amenities--element--img">
-                                Kitchen
-                            </p>
-                            <p class="main__offers--elements--room--data--content--amenities--element">
-                                <img src="{% static 'media/shower.svg' %}" alt="shower svg" class="main__offers--elements--room--data--content--amenities--element--img">
-                                Shower
-                            </p>
-                            <p class="main__offers--elements--room--data--content--amenities--element">
-                                <img src="{% static 'media/singleBed.svg' %}" alt="a bed svg" class="main__offers--elements--room--data--content--amenities--element--img">
-                                Single bed
-                            </p>
-                            <p class="main__offers--elements--room--data--content--amenities--element">
-                                <img src="{% static 'media/towels.svg' %}" alt="towel svg" class="main__offers--elements--room--data--content--amenities--element--img">
-                                Towels
-                            </p>
-                        </div>        
-                    </div>
-                                
-                    <button class="main__offers--elements--room--data--bt" onclick="location.href='./roomDetails.html'">BOOK NOW</button>
-                </div>
-            </div>
-        </div>
-        <div class="main__offers--elements">
-            <div class="main__offers--elements--room">
-                <img src="{% static 'media/room.jpg' %}" alt="a room of hotel" class="main__offers--elements--room--image">
-                <div class="main__offers--elements--room--prices">
-                    <p class="main__offers--elements--room--prices--price-old">$500<span class="main__offers--elements--room--prices--price-old--night">/Night</span></p>
-                    <p class="main__offers--elements--room--prices--price-new">$350<span class="main__offers--elements--room--prices--price-new--night">/Night</span></p>
-                </div>
-                <div class="main__offers--elements--room--data">
-                    <p class="main__offers--elements--room--data--info">DOUBLE BED</p>
-                    <h1 class="main__offers--elements--room--data--title">Luxury Double Bed</h1>
-                    <hr class="main__offers--elements--room--data--separator">
-                    <div class="main__offers--elements--room--data--content">
-                        <p class="main__offers--elements--room--data--content--desc">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend erit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        </p>
-                        <div class="main__offers--elements--room--data--content--amenities">
-                            <p class="main__offers--elements--room--data--content--amenities--element">
-                                <img src="{% static 'media/airConditioner.svg' %}" alt="air conditioner svg" class="main__offers--elements--room--data--content--amenities--element--img">
-                                Air conditioner
-                            </p>
-                            <p class="main__offers--elements--room--data--content--amenities--element">
-                                <img src="{% static 'media/smallBreakfast.svg' %}" alt="breakfast svg" class="main__offers--elements--room--data--content--amenities--element--img">
-                                Breakfast
-                            </p>
-                            <p class="main__offers--elements--room--data--content--amenities--element">
-                                <img src="{% static 'media/cleaning.svg' %}" alt="cleaning svg" class="main__offers--elements--room--data--content--amenities--element--img">
-                                Cleaning
-                            </p>
-                            <p class="main__offers--elements--room--data--content--amenities--element">
-                                <img src="{% static 'media/grocery.svg' %}" alt="grocery svg" class="main__offers--elements--room--data--content--amenities--element--img">
-                                Grocery
-                            </p>
-                            <p class="main__offers--elements--room--data--content--amenities--element">
-                                <img src="{% static 'media/shopNear.svg' %}" alt="shop svg" class="main__offers--elements--room--data--content--amenities--element--img">
-                                Shop Near
-                            </p>
-                            <p class="main__offers--elements--room--data--content--amenities--element">
-                                <img src="{% static 'media/wifi.svg' %}" alt="wifi svg" class="main__offers--elements--room--data--content--amenities--element--img">
-                                High speed WiFi
-                            </p>
-                            <p class="main__offers--elements--room--data--content--amenities--element">
-                                <img src="{% static 'media/kitchen.svg' %}" alt="kitchen svg" class="main__offers--elements--room--data--content--amenities--element--img">
-                                Kitchen
-                            </p>
-                            <p class="main__offers--elements--room--data--content--amenities--element">
-                                <img src="{% static 'media/shower.svg' %}" alt="shower svg" class="main__offers--elements--room--data--content--amenities--element--img">
-                                Shower
-                            </p>
-                            <p class="main__offers--elements--room--data--content--amenities--element">
-                                <img src="{% static 'media/singleBed.svg' %}" alt="a bed svg" class="main__offers--elements--room--data--content--amenities--element--img">
-                                Single bed
-                            </p>
-                            <p class="main__offers--elements--room--data--content--amenities--element">
-                                <img src="{% static 'media/towels.svg' %}" alt="towel svg" class="main__offers--elements--room--data--content--amenities--element--img">
-                                Towels
-                            </p>
-                        </div>        
-                    </div>
-                                
-                    <button class="main__offers--elements--room--data--bt" onclick="location.href='./roomDetails.html'">BOOK NOW</button>
-                </div>
-            </div>
-        </div>        
-            
+
+        {% endfor %}
+        
         <div class="main__offers--popular">
             <p class="main__offers--popular--info">POPULAR LIST</p>
             <h1 class="main__offers--popular--title">Popular Rooms</h1>
