@@ -80,13 +80,15 @@
         </div>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.1327030933285!2d-3.7172707234691624!3d40.42806035494868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4229fc15efcb09%3A0xb0036150b0cd3867!2sOXYGEN%20Academy%20%7C%20Full%20Stack%20Bootcamps!5e0!3m2!1ses!2ses!4v1700066841065!5m2!1ses!2ses" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="main__contact--map"></iframe>
 
-        <form class="main__contact--data">
-            <input type="text" class="main__contact--data--element " placeholder="Your full name" />
-            <input type="text" class="main__contact--data--element" placeholder="Add phone number" />
-            <input type="text" class="main__contact--data--element" placeholder="Enter email address" />
-            <input type="text" class="main__contact--data--element" placeholder="Enter subject" />
-            <textarea id="" class="main__contact--data--element--textarea" cols="30" rows="10" placeholder="Enter message"></textarea>
-            <button class="main__contact--data--send" id="formContact">SEND</button>
+
+        <form method="post" class="main__contact--data">
+            {% csrf_token %}
+            {{ form.photo }}
+            {{ form.name }}
+            {{ form.phone }}
+            {{ form.email }}
+            {{ form.comment }}
+            <button type="submit" class="main__contact--data--send" id="formContact">SEND</button>
         </form>
     </main>
 

@@ -28,7 +28,7 @@ urlpatterns = [
     # path('room/<int:id>', TemplateView.as_view(template_name='roomDetails.html'), name='roomDetails'),
     path('rooms/<int:room_id>', roomsViews.view_room_id, name='room'),
     path('offers/', roomsViews.view_rooms_offers, name='offers'),
-    path('contact/', TemplateView.as_view(template_name='contact.html'), name='contact'),
+    path('contact/', contactsViews.post_contact, name='contact'),
     path('about/', TemplateView.as_view(template_name='about.html'), name='about'),
     
     

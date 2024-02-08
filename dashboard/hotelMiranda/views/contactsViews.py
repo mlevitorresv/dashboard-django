@@ -1,6 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from hotelMiranda.models import Contact
+from ..forms import contactForm
+import datetime
 
 
 # Create your views here.
@@ -14,4 +16,16 @@ def view_contacts(request):
     return HttpResponse(results)
 
 def post_contact(request):
-    return HttpResponse('create new contact')
+    if request.method == 'POST':
+        form = contactForm(request.POST)
+        if form.is_valid():
+            contact = form.save(commit=False)
+            contact.date = datetime.date.today()
+            contact.dateTime = datetime.datetime.now().time()
+            contact.archived = False
+            contact.save()
+            return redirect('contact')
+    else:
+        form = contactForm()
+        
+    return render(request, 'contact.html', {'form': form})
