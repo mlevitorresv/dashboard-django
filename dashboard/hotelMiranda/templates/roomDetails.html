@@ -18,7 +18,7 @@
                 <img src="{% static 'media/burgerIcon.png' %}" alt="menu icon" class="header__all--left--burger" id="burgerIcon" />
                 <img src="{% static 'media/crossBurger.png' %}" alt="cross icon" class="header__all--left--cross"
                     id="crossBurgerIcon" />
-                <a href="./index.html" class="header__all--left--logo">
+                <a href="{% url 'index' %}" class="header__all--left--logo">
                     <h1 class="header__all--left--logo--H">H</h1>
                     <h1 class="header__all--left--logo--name">Hotel<br />Miranda</h1>
                 </a>
@@ -26,16 +26,16 @@
 
             <div class="header__all--menu" id="menu">
                 <ul class="header__all--menu--items">
-                    <a href="./about.html" class="header__all--menu--items--link">
+                    <a href="{% url 'about' %}" class="header__all--menu--items--link">
                         <li class="header__all--menu--items--about">About Us</li>
                     </a>
-                    <a href="./rooms.html" class="header__all--menu--items--link">
+                    <a href="{% url 'rooms' %}" class="header__all--menu--items--link">
                         <li class="header__all--menu--items--rooms">Rooms</li>
                     </a>
-                    <a href="./offers.html" class="header__all--menu--items--link">
+                    <a href="{% url 'offers' %}" class="header__all--menu--items--link">
                         <li class="header__all--menu--items--offers">Offers</li>
                     </a>
-                    <a href="./contact.html" class="header__all--menu--items--link">
+                    <a href="{% url 'contact' %}" class="header__all--menu--items--link">
                         <li class="header__all--menu--items--contact">Contact</li>
                     </a>
                 </ul>
