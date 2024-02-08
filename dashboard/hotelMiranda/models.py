@@ -31,6 +31,8 @@ class Contact(models.Model):
 class Booking(models.Model):
     photo = models.CharField(max_length=255)
     name = models.CharField(max_length=255)
+    email = models.EmailField(default="example@example.com")
+    phone = models.CharField(max_length=12, default="999 999 999")
     orderDate = models.DateField()
     orderTime = models.TimeField()
     checkinDate = models.DateField()
