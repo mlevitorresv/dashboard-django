@@ -1,5 +1,5 @@
 from django import forms
-from hotelMiranda.models import Contact
+from hotelMiranda.models import Contact, Booking
 
 
 class contactForm(forms.ModelForm):
@@ -18,3 +18,17 @@ class contactForm(forms.ModelForm):
 class index_available_form(forms.Form):
     arrival_date = forms.DateField(widget=forms.DateInput(attrs={'class': 'main__availability--form--data--input', 'name': 'arrivalDate', 'id': 'arrivalDate'}))
     departure_date = forms.DateField(widget=forms.DateInput(attrs={'class': 'main__availability--form--data--input', 'name': 'departureDate', 'id': 'departureDate'}))
+    
+    
+class booking_form(forms.ModelForm):
+    class Meta:
+        model = Booking
+        fields = ['checkinDate', 'checkoutDate', 'name', 'email', 'phone', 'notes']
+        widgets = {
+            'checkinDate': forms.DateInput(attrs={'class': 'main__details--room--availability--form--input', 'name': 'arrivalDate', 'id': 'arrivalDate'}),
+            'checkoutDate': forms.DateInput(attrs={'class': 'main__details--room--availability--form--input', 'name': 'leDepartureDate', 'id': 'leDepartureDate'}),
+            'name': forms.TextInput(attrs={'class': 'main__details--room--availability--form--input', 'name': 'fullName', 'id': 'fullName'}),
+            'email': forms.TextInput(attrs={'class': 'main__details--room--availability--form--input', 'name': 'email', 'id': 'email'}),
+            'phone': forms.TextInput(attrs={'class': 'main__details--room--availability--form--input', 'name': 'phone', 'id': 'phone'}),
+            'notes': forms.TextInput(attrs={'class': 'main__details--room--availability--form--input', 'name': 'message', 'id': 'message'}),
+        }

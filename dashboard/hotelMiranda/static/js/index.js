@@ -20,14 +20,14 @@ const handleMenu = () => {
 
 
 
-const handleForms = (form) => {
-  if (form === 'data'){
-    // alert('datos enviados correctamente')
-  }else if(form === 'noData'){
-    // location.href = './rooms.html'
-  }
-}
+// const handleForms = (form) => {
+//   if (form === 'data'){
+//     // alert('datos enviados correctamente')
+//   }else if(form === 'noData'){
+//     // location.href = './rooms.html'
+//   }
+// }
 
-burgerButton.onclick = handleMenu;
-// formContact.onclick = handleForms('data')
-availabilityForm.onclick = handleForms('noData')
+// burgerButton.onclick = handleMenu;
+// // formContact.onclick = handleForms('data')
+// availabilityForm.onclick = handleForms('noData')

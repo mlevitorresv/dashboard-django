@@ -67,19 +67,20 @@
                 <p class="main__details--room--availability--subtitle">
                     Check availability
                 </p>
-                <form class="main__details--room--availability--form">
+                <form class="main__details--room--availability--form" method="post">
+                    {% csrf_token %}
                     <label for="arrivalDate" class="main__details--room--availability--form--text">Arrival Date</label>
-                    <input type="date" name="arrivalDate" id="arrivalDate" class="main__details--room--availability--form--input" />
+                    {{ form.checkinDate }}
                     <label for="leDepartureDate"  class="main__details--room--availability--form--text">LeDeparture Date</label>
-                    <input type="date" name="leDepartureDate" id="leDepartureDate"  class="main__details--room--availability--form--input" />
+                    {{ form.checkoutDate }}
                     <label for="fullName"  class="main__details--room--availability--form--text">FullName</label>
-                    <input type="text" name="fullName" id="fullName"  class="main__details--room--availability--form--input" />
+                    {{ form.name }}
                     <label for="email"  class="main__details--room--availability--form--text">Email</label>
-                    <input type="text" name="email" id="email"  class="main__details--room--availability--form--input" />
+                    {{ form.email }}
                     <label for="phone"  class="main__details--room--availability--form--text">Phone</label>
-                    <input type="number" name="phone" id="phone"  class="main__details--room--availability--form--input" />
+                    {{ form.phone }}
                     <label for="message"  class="main__details--room--availability--form--text">Message(Special Request)</label>
-                    <input type="text" name="message" id="message"  class="main__details--room--availability--form--input" />
+                    {{ form.notes }}
                     <button type="submit" class="main__details--room--availability--form--bt">CHECK AVAILABILITY</button>
                 </form>
             </div>
