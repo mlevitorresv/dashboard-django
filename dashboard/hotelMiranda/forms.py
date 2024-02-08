@@ -13,3 +13,8 @@ class contactForm(forms.ModelForm):
             'email': forms.TextInput(attrs={'class': 'main__contact--data--element', 'placeholder': 'Add email'}),
             'comment': forms.Textarea(attrs={'class': 'main__contact--data--element--textarea', 'cols': 30, 'rows': 10, 'placeholder': 'Your comment about us'})
         }
+        
+        
+class index_available_form(forms.Form):
+    arrival_date = forms.DateField(widget=forms.DateInput(attrs={'class': 'main__availability--form--data--input', 'name': 'arrivalDate', 'id': 'arrivalDate'}))
+    departure_date = forms.DateField(widget=forms.DateInput(attrs={'class': 'main__availability--form--data--input', 'name': 'departureDate', 'id': 'departureDate'}))

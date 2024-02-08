@@ -1,12 +1,22 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from hotelMiranda.models import Rooms
+import datetime
 
 
 # Create your views here.
 def view_rooms(request):
-    data = Rooms.objects.all()
+    arrival_date_str = request.GET.get('arrival_date')
+    departure_date_str  = request.GET.get('departure_date')
     
+    data = Rooms.objects.all()    
+    
+    if arrival_date_str and departure_date_str:
+        try:
+            data = Rooms.objects.filter(available=True) 
+        except ValueError:
+            print(f'Error: {ValueError}')
+            pass
     results = []
     for room in data:
         results.append({

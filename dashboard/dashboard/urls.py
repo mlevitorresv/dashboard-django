@@ -17,12 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.views.generic import TemplateView
-from hotelMiranda.views import contactsViews, roomsViews, bookingViews
+from hotelMiranda.views import contactsViews, roomsViews, bookingViews, indexViews
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     
-    path('', TemplateView.as_view(template_name='index.html'), name='index'),
+    path('', indexViews.index, name='index'),
     # path('rooms/', TemplateView.as_view(template_name='rooms.html'), name='rooms'),
     path('rooms/', roomsViews.view_rooms, name='rooms'),
     # path('room/<int:id>', TemplateView.as_view(template_name='roomDetails.html'), name='roomDetails'),
