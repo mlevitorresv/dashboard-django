@@ -54,7 +54,7 @@
 
         <div class="main__rooms--elements">
             {% for room in rooms %}
-            <div class="main__rooms--elements--element" onclick="location.href='./roomDetails.html'">
+            <div class="main__rooms--elements--element" onclick="window.location.href= `{% url 'roomDetails' room_id=room.id%}`"">
                 <img src="{{room.photo}}" alt="a room of hotel" class="main__rooms--elements--element--image">
                 <div class="main__rooms--elements--element--info">
                     <div class="main__rooms--elements--element--info--icons">

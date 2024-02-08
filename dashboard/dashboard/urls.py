@@ -26,7 +26,7 @@ urlpatterns = [
     # path('rooms/', TemplateView.as_view(template_name='rooms.html'), name='rooms'),
     path('rooms/', roomsViews.view_rooms, name='rooms'),
     # path('room/<int:id>', TemplateView.as_view(template_name='roomDetails.html'), name='roomDetails'),
-    path('rooms/<int:room_id>', roomsViews.view_room_id, name='room'),
+    path('rooms/<int:room_id>', roomsViews.view_room_id, name='roomDetails'),
     path('offers/', roomsViews.view_rooms_offers, name='offers'),
     path('contact/', contactsViews.post_contact, name='contact'),
     path('about/', TemplateView.as_view(template_name='about.html'), name='about'),
