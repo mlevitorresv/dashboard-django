@@ -20,7 +20,7 @@
                     id="crossBurgerIcon" />
                 <a href="{% url 'index' %}" class="header__all--left--logo">
                     <h1 class="header__all--left--logo--H">H</h1>
-                    <h1 class="header__all--left--logo--name">Hotel<br />Miranda</h1>
+                    <h1 class="header__all--left--logo--name">Hotel<br />Miranda</h1>.
                 </a>
             </div>
 
@@ -118,7 +118,7 @@
                         </div>        
                     </div>
                                 
-                    <button class="main__offers--elements--room--data--bt" onclick="location.href='./roomDetails.html'">BOOK NOW</button>
+                    <button class="main__offers--elements--room--data--bt" onclick="window.location.href= `{% url 'roomDetails' room_id=room.id %}`">BOOK NOW</button>
                 </div>
             </div>
         </div>
