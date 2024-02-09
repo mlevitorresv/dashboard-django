@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from hotelMiranda.models import Rooms
-from ..forms import bookingForm
+from hotelMiranda.forms import bookingForm
 import datetime
 
 
