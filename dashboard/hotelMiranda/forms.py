@@ -15,12 +15,12 @@ class contactForm(forms.ModelForm):
         }
         
         
-class index_available_form(forms.Form):
+class indexAvailableForm(forms.Form):
     arrival_date = forms.DateField(widget=forms.DateInput(attrs={'class': 'main__availability--form--data--input', 'name': 'arrivalDate', 'id': 'arrivalDate'}))
     departure_date = forms.DateField(widget=forms.DateInput(attrs={'class': 'main__availability--form--data--input', 'name': 'departureDate', 'id': 'departureDate'}))
     
     
-class booking_form(forms.ModelForm):
+class bookingForm(forms.ModelForm):
     class Meta:
         model = Booking
         fields = ['checkinDate', 'checkoutDate', 'name', 'email', 'phone', 'notes']

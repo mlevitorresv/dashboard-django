@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from hotelMiranda.models import Rooms
-from ..forms import booking_form
+from ..forms import bookingForm
 import datetime
 
 
@@ -54,16 +54,16 @@ def view_room_id(request, room_id):
     }
     
     if request.method == 'POST':
-        form = booking_form(request.POST)
+        form = bookingForm(request.POST)
         if form.is_valid():
             booking = form.save(commit = False)
             booking.roomId = data.id
             booking.save()
             return redirect('rooms')
     else:
-        form = booking_form()
+        form = bookingForm()
         
-    return render(request, 'roomDetails.html', {'room': result, 'form': booking_form})
+    return render(request, 'roomDetails.html', {'room': result, 'form': bookingForm})
 
 
 def view_rooms_offers(request):
