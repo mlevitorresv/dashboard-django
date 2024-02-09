@@ -56,7 +56,7 @@ class Migration(migrations.Migration):
                 ('checkoutTime', models.TimeField()),
                 ('notes', models.TextField()),
                 ('status', models.CharField(max_length=255)),
-                ('roomId', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='hotelMiranda.rooms')),
+                ('roomId', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='website.rooms')),
             ],
         ),
     ]

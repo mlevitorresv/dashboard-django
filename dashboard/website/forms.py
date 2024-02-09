@@ -1,5 +1,5 @@
 from django import forms
-from hotelMiranda.models import Contact, Booking
+from website.models import Contact, Booking
 
 
 class contactForm(forms.ModelForm):
