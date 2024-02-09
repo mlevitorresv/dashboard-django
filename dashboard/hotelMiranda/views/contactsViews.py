@@ -19,11 +19,7 @@ def post_contact(request):
     if request.method == 'POST':
         form = contactForm(request.POST)
         if form.is_valid():
-            contact = form.save(commit=False)
-            contact.date = datetime.date.today()
-            contact.dateTime = datetime.datetime.now().time()
-            contact.archived = False
-            contact.save()
+            form.save()
             return redirect('contact')
     else:
         form = contactForm()

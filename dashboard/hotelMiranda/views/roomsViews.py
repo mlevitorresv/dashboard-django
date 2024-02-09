@@ -57,15 +57,8 @@ def view_room_id(request, room_id):
         form = booking_form(request.POST)
         if form.is_valid():
             booking = form.save(commit = False)
-            booking.photo = 'https://castillotrans.eu/wp-content/uploads/2019/06/77461806-icono-de-usuario-hombre-hombre-avatar-avatar-pictograma-pictograma-vector-ilustraci%C3%B3n.jpg'
-            booking.orderDate = datetime.datetime.now().date()
-            booking.orderTime = datetime.datetime.now().time()
-            booking.checkinTime = datetime.time(12,00)
-            booking.checkoutTime = datetime.time(12,00)
-            booking.status = 'booked'
             booking.roomId = data.id
             booking.save()
-            print("Datos guardados exitosamente:", booking)  # Mensaje de registro para verificar si los datos se guardaron correctamente
             return redirect('rooms')
     else:
         form = booking_form()
