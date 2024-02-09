@@ -10,60 +10,31 @@ def view_rooms(request):
     arrival_date_str = request.GET.get('arrival_date')
     departure_date_str  = request.GET.get('departure_date')
     
-    data = Rooms.objects.all()    
+    rooms = Rooms.objects.all()    
     
     if arrival_date_str and departure_date_str:
         try:
-            data = Rooms.objects.filter(available=True) 
+            rooms = Rooms.objects.filter(available=True) 
         except ValueError:
             print(f'Error: {ValueError}')
             pass
-    results = []
-    for room in data:
-        results.append({
-            'id': room.id,
-            'number': room.number,
-            'photo': room.photo,
-            'type': room.type,
-            'bed': room.bed,
-            'amenities': room.amenities,
-            'description': room.description,
-            'rate': room.rate,
-            'price': room.price,
-            'discount': room.discount,
-            'available': room.available
-        })
         
-    return render(request, 'rooms.html', {'rooms': results})
+    return render(request, 'rooms.html', {'rooms': rooms})
 
 def view_room_id(request, room_id):
-    data = Rooms.objects.get(id=room_id)
-        
-    result = {
-        'id': data.id,
-        'Number': data.number, 
-        'photo': data.photo,
-        'type': data.type,
-        'bed': data.bed,
-        'amenities': data.amenities,
-        'description': data.description,
-        'rate': data.rate,
-        'price': data.price,
-        'discount': data.discount,
-        'available': data.available
-    }
+    room = Rooms.objects.get(id=room_id)
     
     if request.method == 'POST':
         form = bookingForm(request.POST)
         if form.is_valid():
             booking = form.save(commit = False)
-            booking.roomId = data.id
+            booking.roomId = room.id
             booking.save()
             return redirect('rooms')
     else:
         form = bookingForm()
         
-    return render(request, 'roomDetails.html', {'room': result, 'form': bookingForm})
+    return render(request, 'roomDetails.html', {'room': room, 'form': bookingForm})
 
 
 def view_rooms_offers(request):
