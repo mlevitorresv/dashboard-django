@@ -18,7 +18,9 @@ def post_order(request):
     if request.method == 'POST':
         form = orderForm(request.POST)
         if form.is_valid:
-            form.save()
+            order = form.save(commit=False)
+            order.user = request.user
+            order.save()
             return redirect('orders')
     else:
         form = orderForm()
