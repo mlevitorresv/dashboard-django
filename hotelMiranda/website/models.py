@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from django.contrib.auth.models import User
 import datetime
 
 class Rooms(models.Model):
@@ -41,4 +42,15 @@ class Booking(models.Model):
     notes = models.TextField()
     roomId = models.ForeignKey(Rooms, on_delete=models.CASCADE)
     status = models.CharField(max_length=255, default='booked')
+    
+class Order(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    room = models.ForeignKey(Rooms, on_delete=models.CASCADE)
+    type_choice = {
+        'food': 'food',
+        'other': 'other'
+    }
+    type = models.CharField(choices=type_choice, max_length=10)
+    description = models.TextField()
+    timestamps = models.DateTimeField(auto_now=True)
     
