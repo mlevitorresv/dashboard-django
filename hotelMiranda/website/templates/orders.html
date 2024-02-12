@@ -4,10 +4,18 @@
 
 {% block content %} 
 
-<div>
+<main>
     {% for order in orders%}
-        <h1>Hola</h1>
+        <div>
+            <p>
+                {{ order.type }} : {{ order.description }}
+            </p>
+            <p>
+                <img src="{% static 'media/editIcon.png' %}" alt="edit icon">
+                <img src="{% static 'media/trash.png' %}" alt="trash icon">
+            </p>
+        </div>
     {% endfor %}
-</div>
+</main>
 
 {% endblock %}
