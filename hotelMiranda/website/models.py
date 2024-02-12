@@ -14,6 +14,9 @@ class Rooms(models.Model):
     price = models.FloatField()
     discount = models.IntegerField()
     available = models.BooleanField()
+    
+    def __str__(self):
+        return str(self.number)
 
 
 class Contact(models.Model):
