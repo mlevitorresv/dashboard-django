@@ -17,7 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.views.generic import TemplateView
-from website.views import contactsViews, roomsViews, indexViews, signUpViews
+from hotelMiranda.website.views import usersViews
+from website.views import contactsViews, roomsViews, indexViews
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,6 +31,6 @@ urlpatterns = [
     path('about/', TemplateView.as_view(template_name='about.html'), name='about'),
     
     path('accounts/', include('django.contrib.auth.urls')),
-    path('accounts/signup', signUpViews.SignUpView.as_view(), name='signup')
+    path('accounts/signup', usersViews.SignUpView.as_view(), name='signup')
 
 ]
