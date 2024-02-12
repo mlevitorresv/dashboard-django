@@ -34,7 +34,13 @@ class bookingForm(forms.ModelForm):
         }
         
         
-# class orderForm(forms.ModelForm):
-#     class Meta:
-#         model = Order
+class orderForm(forms.ModelForm):
+    class Meta:
+        model = Order
+        fields = ['type', 'description', 'room']
+        widgets = {
+            'type': forms.Select(attrs={'class': 'main__details--room--availability--form--input', 'name': 'arrivalDate', 'id': 'arrivalDate'}),
+            'description': forms.TextInput(attrs={'class': 'main__details--room--availability--form--input', 'name': 'leDepartureDate', 'id': 'leDepartureDate'}),
+            'room': forms.Select(attrs={'class': 'main__details--room--availability--form--input', 'name': 'fullName', 'id': 'fullName'}),
+        }
         
