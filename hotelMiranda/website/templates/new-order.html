@@ -6,8 +6,10 @@
 
 <form method="post" class="main__contact--data">
     {% csrf_token %}
+    <label for="type"><h1>type of order</h1></label>
     {{ form.type }}
     {{ form.description }}
+    <label for="room"><h1>Select your room</h1></label>
     {{ form.room }}
     <button type="submit" class="main__contact--data--send" id="formContact">SEND</button>
 </form>
