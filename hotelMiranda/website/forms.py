@@ -1,5 +1,5 @@
 from django import forms
-from website.models import Contact, Booking
+from website.models import Contact, Booking, Order
 
 
 class contactForm(forms.ModelForm):
@@ -32,3 +32,9 @@ class bookingForm(forms.ModelForm):
             'phone': forms.TextInput(attrs={'class': 'main__details--room--availability--form--input', 'name': 'phone', 'id': 'phone'}),
             'notes': forms.TextInput(attrs={'class': 'main__details--room--availability--form--input', 'name': 'message', 'id': 'message'}),
         }
+        
+        
+# class orderForm(forms.ModelForm):
+#     class Meta:
+#         model = Order
+        
