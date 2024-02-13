@@ -33,6 +33,7 @@ urlpatterns = [
     path('accounts/signup', usersViews.SignUpView.as_view(), name='signup'),    
     path('accounts/orders', ordersViews.view_orders, name='orders'),
     path('accounts/orders/<int:order_id>', ordersViews.view_order_id, name='orderDetails'),
-    path('accounts/new-order', ordersViews.post_order, name='orders')
+    path('accounts/delete-order/<int:order_id>', ordersViews.delete_order, name='removeOrder'),
+    path('accounts/new-order', ordersViews.post_order, name='newOrder')
 
 ]

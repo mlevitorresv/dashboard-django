@@ -28,5 +28,5 @@ def post_order(request):
 
 def delete_order(request, order_id):
     order = Order.objects.filter(id = order_id).delete()
-    return redirect('orders')
+    return render(request, 'deleteOrder.html')
 
