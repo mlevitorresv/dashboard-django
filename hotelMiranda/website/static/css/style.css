@@ -2216,5 +2216,18 @@ body {
     margin: auto;
   }
 }
+.main__orders {
+  padding: 2em 1em;
+}
+.main__orders__elements {
+  padding: 2em 1em;
+}
+.main__orders__elements__element {
+  display: flex;
+  justify-content: space-between;
+}
+.main__orders__elements__element__icons__icon {
+  width: 20px;
+}
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,17 @@
+.main__orders{
+    padding: 2em 1em;
+    &__elements{
+        padding: 2em 1em;
+
+        &__element{
+            display: flex;
+            justify-content: space-between;
+
+            &__icons{
+                &__icon{
+                    width: 20px;
+                }
+            }
+        }
+    }
+}

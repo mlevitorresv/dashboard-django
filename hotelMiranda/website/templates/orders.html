@@ -4,18 +4,19 @@
 
 {% block content %} 
 
-<main>
-    {% for order in orders%}
-        <div oon>
-            <p>
-                {{ order.type }} : {{ order.description }}
-            </p>
-            <p>
-                <img src="{% static 'media/editIcon.png' %}" alt="edit icon" onclick="window.location.href= `{% url 'orderDetails' order_id=order.id%}`"">
-                <img src="{% static 'media/trash.png' %}" alt="trash icon">
-            </p>
+<main class="main__orders">
+        <div class="main__orders__elements">
+            {% for order in orders%}
+            <div class="main__orders__elements__element" onclick="window.location.href= `{% url 'orderDetails' order_id=order.id%}`">
+                <p class="main__orders__elements__element__description">
+                    {{ order.type }} : {{ order.description }}
+                </p>
+                <p class="main__orders__elements__element__icons">
+                    <img class="main__orders__elements__element__icons__icon" src="{% static 'media/editIcon.png' %}" alt="edit icon" onclick="window.location.href= `{% url 'orderDetails' order_id=order.id%}`"">
+                </p>
+            </div>
+            {% endfor %}
         </div>
-    {% endfor %}
 </main>
 
 {% endblock %}

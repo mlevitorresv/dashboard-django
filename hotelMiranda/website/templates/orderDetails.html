@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %} 
+
+<main>
+        <div>
+            <p>
+                {{ order.type }} : {{ order.description }}
+            </p>
+            <p>
+                <img src="{% static 'media/editIcon.png' %}" alt="edit icon">
+                <img src="{% static 'media/trash.png' %}" alt="trash icon">
+            </p>
+        </div>
+</main>
+
+{% endblock %}
