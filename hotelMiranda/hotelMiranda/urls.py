@@ -32,6 +32,7 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/signup', usersViews.SignUpView.as_view(), name='signup'),    
     path('accounts/orders', ordersViews.view_orders, name='orders'),
+    path('accounts/orders/<int:order_id>', ordersViews.view_orders, name='orderDetails'),
     path('accounts/new-order', ordersViews.post_order, name='orders')
 
 ]

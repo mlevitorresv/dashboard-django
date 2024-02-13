@@ -6,12 +6,12 @@
 
 <main>
     {% for order in orders%}
-        <div>
+        <div oon>
             <p>
                 {{ order.type }} : {{ order.description }}
             </p>
             <p>
-                <img src="{% static 'media/editIcon.png' %}" alt="edit icon">
+                <img src="{% static 'media/editIcon.png' %}" alt="edit icon" onclick="window.location.href= `{% url 'orderDetails' order_id=order.id%}`"">
                 <img src="{% static 'media/trash.png' %}" alt="trash icon">
             </p>
         </div>
