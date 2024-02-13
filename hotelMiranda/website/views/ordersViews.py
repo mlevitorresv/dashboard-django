@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from website.models import Order
-from website.forms import orderForm
+from website.forms import orderForm, orderEditForm
 
 
 
@@ -30,3 +30,14 @@ def delete_order(request, order_id):
     order = Order.objects.filter(id = order_id).delete()
     return render(request, 'deleteOrder.html')
 
+def update_order(request, order_id):
+    order = Order.objects.get(id = order_id)
+    if request.method == 'POST':
+        form = orderEditForm(request.POST, instance=order)
+        if form.is_valid():
+            form.save()
+            return redirect('orders') 
+    else:
+        form = orderEditForm(instance=order)
+    return render(request, 'edit-order.html', {'form': form, 'order': order})
+    

@@ -44,3 +44,12 @@ class orderForm(forms.ModelForm):
             'room': forms.Select(attrs={'class': 'main__contact--data--element', 'name': 'room', 'id': 'room'}),
         }
         
+
+class orderEditForm(forms.ModelForm):
+    class Meta:
+        model = Order
+        fields = ['description']
+        widgets = {
+            'description': forms.Textarea(attrs={'class': 'main__contact--data--element--textarea', 'name': 'description', 'id': 'description', 'cols': 30, 'rows': 10, 'placeholder': 'notes for your order'}),
+        }
+        

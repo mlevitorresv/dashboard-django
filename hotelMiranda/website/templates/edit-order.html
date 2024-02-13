@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}Hotel Miranda - Edit Order{% endblock %}
+{% load static %}
+
+{% block content %} 
+
+<form method="POST" class="main__contact--data">
+    {% csrf_token %}
+    <label for="room"><h1>Enter new description</h1></label>
+    {{ form.description }}
+    <button type="submit" class="main__contact--data--send" id="formContact">SEND DESCRIPTION</button>
+</form>
+
+{% endblock %}
