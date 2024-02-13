@@ -7,7 +7,7 @@ from website.forms import orderForm
 
 
 def view_orders(request):
-    orders = Order.objects.all()
+    orders = Order.objects.filter(user = request.user)
     return render(request, 'orders.html', {'orders': orders})
 
 def view_order_id(request, order_id):
