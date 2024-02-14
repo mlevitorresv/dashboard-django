@@ -50,6 +50,6 @@ class orderEditForm(forms.ModelForm):
         model = Order
         fields = ['description']
         widgets = {
-            'description': forms.Textarea(attrs={'class': 'main__contact--data--element--textarea', 'name': 'description', 'id': 'description', 'cols': 30, 'rows': 10, 'placeholder': 'notes for your order'}),
+            'description': forms.Textarea(attrs={'class': 'main__create__order__element__textarea', 'name': 'description', 'id': 'description', 'cols': 30, 'rows': 10, 'placeholder': 'notes for your order'}),
         }
         

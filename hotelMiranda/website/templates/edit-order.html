@@ -4,9 +4,9 @@
 
 {% block content %} 
 
-<form method="POST" class="main__contact--data">
+<form method="POST" class="main__create__order">
     {% csrf_token %}
-    <label for="room"><h1>Enter new description</h1></label>
+    <label for="room" class="main__create__order__element--label"><h1>Enter new description</h1></label>
     {{ form.description }}
     <button type="submit" class="main__contact--data--send" id="formContact">SEND DESCRIPTION</button>
 </form>
