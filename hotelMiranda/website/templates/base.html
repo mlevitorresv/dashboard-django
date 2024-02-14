@@ -40,7 +40,7 @@
             </div>
 
             <div class="header__all--right">
-                <img src="{% static 'media/personIcon.png' %}" alt="person icon" class="header__all--right--person" />
+                <img src="{% static 'media/personIcon.png' %}" alt="person icon" class="header__all--right--person"  onclick="window.location.href= `{% url 'login' %}`"/>
                 <img src="{% static 'media/lensIcon.png' %}" alt="lens icon" class="header__all--right--lens" />
             </div>
         </div>
