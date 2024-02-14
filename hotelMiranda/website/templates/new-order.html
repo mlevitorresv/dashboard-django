@@ -4,14 +4,14 @@
 
 {% block content %} 
 
-<form method="post" class="main__contact--data">
+<form method="post" class="main__create__order">
     {% csrf_token %}
-    <label for="type"><h1>type of order</h1></label>
+    <label for="type" class="main__create__order__element--label">Choose type of order</label>
     {{ form.type }}
-    {{ form.description }}
-    <label for="room"><h1>Select your room</h1></label>
+    <label for="room" class="main__create__order__element--label">Select your room</label>
     {{ form.room }}
-    <button type="submit" class="main__contact--data--send" id="formContact">SEND</button>
+    {{ form.description }}
+    <button type="submit" class="main__create__order__send" id="formContact">SEND</button>
 </form>
 
 {% endblock %}

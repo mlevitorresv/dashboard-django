@@ -39,9 +39,9 @@ class orderForm(forms.ModelForm):
         model = Order
         fields = ['type', 'description', 'room']
         widgets = {
-            'type': forms.Select(attrs={'class': 'main__contact--data--element', 'name': 'type', 'id': 'type'}),
-            'description': forms.Textarea(attrs={'class': 'main__contact--data--element--textarea', 'name': 'description', 'id': 'description', 'cols': 30, 'rows': 10, 'placeholder': 'notes for your order'}),
-            'room': forms.Select(attrs={'class': 'main__contact--data--element', 'name': 'room', 'id': 'room'}),
+            'type': forms.Select(attrs={'class': 'main__create__order__element', 'name': 'type', 'id': 'type'}),
+            'description': forms.Textarea(attrs={'class': 'main__create__order__element__textarea', 'name': 'description', 'id': 'description', 'cols': 30, 'rows': 10, 'placeholder': 'notes for your order'}),
+            'room': forms.Select(attrs={'class': 'main__create__order__element', 'name': 'room', 'id': 'room'}),
         }
         
 
