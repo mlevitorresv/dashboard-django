@@ -4,14 +4,15 @@
 
 {% block content %} 
 
-<main>
-        <div>
-            <p>
+<main class="main__orders__elements">
+    <h1 class="main__orders__elements__title">Order Nº {{order.id}}</h1>
+        <div class="main__orders__elements__element">
+            <p class="main__orders__elements__element__description">
                 {{ order.type }} : {{ order.description }}
             </p>
-            <p>
-                <img src="{% static 'media/editIcon.png' %}" alt="edit icon" onclick="window.location.href= `{% url 'editOrder' order_id=order.id%}`">
-                <img src="{% static 'media/trash.png' %}" alt="trash icon" onclick="window.location.href= `{% url 'removeOrder' order_id=order.id%}`">
+            <p class="main__orders__elements__element__icons">
+                <img class="main__orders__elements__element__icons__icon" src="{% static 'media/editIcon.png' %}" alt="edit icon" onclick="window.location.href= `{% url 'editOrder' order_id=order.id%}`">
+                <img class="main__orders__elements__element__icons__icon" src="{% static 'media/trash.png' %}" alt="trash icon" onclick="window.location.href= `{% url 'removeOrder' order_id=order.id%}`">
             </p>
         </div>
 </main>
