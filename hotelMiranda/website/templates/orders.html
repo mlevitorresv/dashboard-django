@@ -6,6 +6,7 @@
 
 <main class="main__orders">
         <div class="main__orders__elements">
+            <h1 class="main__orders__elements__title">ALL ORDERS</h1>
             {% for order in orders%}
             <div class="main__orders__elements__element" onclick="window.location.href= `{% url 'orderDetails' order_id=order.id%}`">
                 <p class="main__orders__elements__element__description">

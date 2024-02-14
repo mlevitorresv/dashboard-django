@@ -1,15 +1,35 @@
-.main__orders{
-    padding: 2em 1em;
+.main__orders{    
     &__elements{
-        padding: 2em 1em;
+        width: 50%;
+        margin: 2em auto;
+        padding: 2em 0;
+
+        &__title{
+            margin-bottom: 2em;
+            text-align: center;
+            font-family: 'Archivo';
+        }
 
         &__element{
             display: flex;
             justify-content: space-between;
+            padding: 0 2em;
+            align-items: center;
+            border-radius: 20px;
+            border: 1px solid black;
+            box-shadow: 10px 5px 5px black;
+            margin-bottom: 2em;
+
+            &__description{
+                font-family: 'Archivo';
+                font-size: 1em;
+                font-weight: 400;
+                line-height: 1.6em;
+            }
 
             &__icons{
                 &__icon{
-                    width: 20px;
+                    width: 30px;
                 }
             }
         }
