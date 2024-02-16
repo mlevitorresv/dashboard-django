@@ -8,9 +8,7 @@ import datetime
 # Create your views here.
 def view_rooms(request):
     arrival_date_str = request.GET.get('arrival_date')
-    departure_date_str  = request.GET.get('departure_date')
-    
-    rooms = Rooms.objects.all()    
+    departure_date_str  = request.GET.get('departure_date')   
     
     if arrival_date_str and departure_date_str:
         try:
@@ -18,6 +16,8 @@ def view_rooms(request):
         except ValueError:
             print(f'Error: {ValueError}')
             pass
+    else:
+        rooms = Rooms.objects.all() 
         
     return render(request, 'rooms.html', {'rooms': rooms})
 
