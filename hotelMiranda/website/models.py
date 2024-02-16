@@ -15,6 +15,10 @@ class Rooms(models.Model):
     discount = models.IntegerField()
     available = models.BooleanField()
     
+    @property
+    def final_price(self):
+        return self.price - (self.price * (self.discount / 100))
+    
     def __str__(self):
         return str(self.number)
 

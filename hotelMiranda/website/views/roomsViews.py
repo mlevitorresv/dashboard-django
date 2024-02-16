@@ -38,25 +38,7 @@ def view_room_id(request, room_id):
 
 
 def view_rooms_offers(request):
-    data = Rooms.objects.filter(discount__gt = 0)
-    
-    results = []
-    for room in data:
-        results.append({
-            'id': room.id,
-            'number': room.number,
-            'photo': room.photo,
-            'type': room.type,
-            'bed': room.bed,
-            'amenities': room.amenities,
-            'description': room.description,
-            'rate': room.rate,
-            'price': room.price,
-            'discount': room.discount,
-            'final_price': room.price - (room.price * (room.discount/100)),
-            'available': room.available
-        })
-        
-    return render(request, 'offers.html', {'rooms': results})
+    rooms = Rooms.objects.filter(discount__gt = 0)        
+    return render(request, 'offers.html', {'rooms': rooms})
     
     
