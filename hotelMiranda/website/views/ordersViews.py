@@ -11,7 +11,7 @@ def view_orders(request):
     return render(request, 'orders.html', {'orders': orders})
 
 def view_order_id(request, order_id):
-    order = Order.objects.get(id=order_id)
+    order = Order.objects.get(id=order_id, user = request.user)
     return render(request, 'orderDetails.html', {'order': order})
 
 def post_order(request):
@@ -27,11 +27,11 @@ def post_order(request):
     return render(request, 'new-order.html', {'form': form})
 
 def delete_order(request, order_id):
-    order = Order.objects.filter(id = order_id).delete()
+    order = Order.objects.filter(id = order_id, user = request.user).delete()
     return render(request, 'deleteOrder.html')
 
 def update_order(request, order_id):
-    order = Order.objects.get(id = order_id)
+    order = Order.objects.get(id = order_id, user = request.user)
     if request.method == 'POST':
         form = orderEditForm(request.POST, instance=order)
         if form.is_valid():
