@@ -1,0 +1,25 @@
+name: Deployment HotelMiranda Django
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu 22.04
+
+    steps:
+      - name: connect to server
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd dashboard-django
+            git pull origin main
+            pip install -r requirements.txt
+            python3 hotelMiranda/manage.py migrate
+            sudo systemctl restart nginx
+            sudo systemctl restart gunicorn
