@@ -18,11 +18,10 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             cd dashboard-django
-            
             git pull origin main
             /home/ubuntu/dashboard-django/env/bin/pip install -r requirements.txt
             /home/ubuntu/dashboard-django/env/bin/python3 hotelMiranda/manage.py makemigrations
             /home/ubuntu/dashboard-django/env/bin/python3 hotelMiranda/manage.py migrate
             sudo systemctl restart nginx
             sudo systemctl restart gunicorn
-            sudo /home/ubuntu/dashboard-django/env/bin/python3 hotelMiranda/manage.py collectstatic
+            sudo /home/ubuntu/dashboard-django/env/bin/python3 hotelMiranda/manage.py collectstatic --no-input
