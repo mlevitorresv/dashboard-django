@@ -51,12 +51,32 @@
             margin-bottom: 1.5em;
         }
         
-        &__create{
+        & span, ul{
+            display: none;
+        }
+        
+        &__info{
             color: #777;
             font-family: "Archivo";
             font-size: 0.9em;
             font-weight: 400;
             line-height: 1.5em;
+
+            &__list{
+                display: block;
+                list-style-type: none;
+                margin-bottom: 1em;
+
+                &__element{
+                    width: 100%;
+                    text-align: left;
+                    color: #111;
+                    font-family: "Archivo";
+                    font-size: 0.7em;
+                    font-weight: 400;
+                    line-height: 1.5em;
+                }
+            }
 
             &__link{
                 text-decoration: underline;

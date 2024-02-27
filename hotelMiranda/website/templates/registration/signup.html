@@ -1,12 +1,31 @@
 {% extends 'base.html' %}
 
-{% block title %}Sign Up{% endblock %}
+{% block title %}Hotel Miranda - Sign Up{% endblock %}
 
 {% block content %}
-  <h2>Sign up</h2>
-  <form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Sign Up</button>
-  </form>
+  <main class="main__login">
+    <h1 class="main__login__title">Sign Up</h1>
+    <form method="post" class="main__login__form">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <p class="main__login__form__info">
+        <ol class="main__login__form__info__list">
+          <li class="main__login__form__info__list__element">
+            Your password can’t be too similar to your other personal information.
+          </li>
+          <li class="main__login__form__info__list__element">
+            Your password must contain at least 8 characters.
+          </li>
+          <li class="main__login__form__info__list__element">
+            Your password can’t be a commonly used password.
+          </li>
+          <li class="main__login__form__info__list__element">
+            Your password can’t be entirely numeric.
+          </li>
+        </ol>
+      </p>
+      <button type="submit" class="main__login__form">Sign Up</button>
+      <p class="main__login__form__info">Already have an account? <a href="{% url 'login' %}" class="main__login__form__info__link">Sign in</a></p>
+    </form>
+  </main>
 {% endblock %}

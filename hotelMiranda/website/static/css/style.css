@@ -2372,14 +2372,31 @@ body {
   letter-spacing: 0.2em;
   margin-bottom: 1.5em;
 }
-.main__login__form__create {
+.main__login__form span, .main__login__form ul {
+  display: none;
+}
+.main__login__form__info {
   color: #777;
   font-family: "Archivo";
   font-size: 0.9em;
   font-weight: 400;
   line-height: 1.5em;
 }
-.main__login__form__create__link {
+.main__login__form__info__list {
+  display: block;
+  list-style-type: none;
+  margin-bottom: 1em;
+}
+.main__login__form__info__list__element {
+  width: 100%;
+  text-align: left;
+  color: #111;
+  font-family: "Archivo";
+  font-size: 0.7em;
+  font-weight: 400;
+  line-height: 1.5em;
+}
+.main__login__form__info__link {
   text-decoration: underline;
   color: #111;
 }
