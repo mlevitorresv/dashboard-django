@@ -35,6 +35,21 @@
                 }
             }
         }
+
+        &__button{
+            display: block;
+            background-color: #BEAD8E;
+            color: white;
+            padding: 1em 2em;
+            margin: 1em auto;
+            border: none;
+            font-family: 'Roboto';
+            font-size: 1em;
+            font-weight: 700;
+            letter-spacing: .2em;
+            margin-bottom: 1.5em;
+            cursor: pointer;
+        }
     }
 }
 

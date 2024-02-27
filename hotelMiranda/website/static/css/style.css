@@ -2247,6 +2247,20 @@ body {
   width: 30px;
   cursor: pointer;
 }
+.main__orders__elements__button {
+  display: block;
+  background-color: #BEAD8E;
+  color: white;
+  padding: 1em 2em;
+  margin: 1em auto;
+  border: none;
+  font-family: "Roboto";
+  font-size: 1em;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  margin-bottom: 1.5em;
+  cursor: pointer;
+}
 
 @media only screen and (min-width: 1000px) {
   .main__orders__elements {
