@@ -2217,7 +2217,7 @@ body {
   }
 }
 .main__orders__elements {
-  width: 50%;
+  width: 80%;
   margin: 2em auto;
   padding: 2em 0;
 }
@@ -2228,6 +2228,7 @@ body {
 }
 .main__orders__elements__element {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   padding: 0 2em;
   align-items: center;
@@ -2247,6 +2248,14 @@ body {
   cursor: pointer;
 }
 
+@media only screen and (min-width: 1000px) {
+  .main__orders__elements {
+    width: 50%;
+  }
+  .main__orders__elements__element {
+    flex-direction: row;
+  }
+}
 .main__remove {
   margin: 5em 0;
   text-align: center;

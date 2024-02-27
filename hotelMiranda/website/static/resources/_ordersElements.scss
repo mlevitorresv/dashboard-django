@@ -1,6 +1,6 @@
 .main__orders{    
     &__elements{
-        width: 50%;
+        width: 80%;
         margin: 2em auto;
         padding: 2em 0;
 
@@ -12,6 +12,7 @@
 
         &__element{
             display: flex;
+            flex-direction: column;
             justify-content: space-between;
             padding: 0 2em;
             align-items: center;
@@ -32,6 +33,22 @@
                     width: 30px;
                     cursor: pointer;
                 }
+            }
+        }
+    }
+}
+
+
+
+
+
+@media only screen and (min-width: 1000px){
+    .main__orders{    
+        &__elements{
+            width: 50%;
+
+            &__element{
+                flex-direction: row;
             }
         }
     }
