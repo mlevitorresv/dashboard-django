@@ -1,6 +1,18 @@
-<h1>Log In</h1>
-<form method="post">
-  {% csrf_token %}
-  {{ form }}
-  <button type="submit">Log In</button>
-</form>
+
+{% extends 'base.html' %}
+{% block title %}Hotel Miranda - Log in{% endblock %}
+
+{% block content %} 
+
+<main class="main__login">
+  <h1 class="main__login__title">Sign In</h1>
+  <form method="post" class="main__login__form">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="main__login__form">Sign In</button>
+    <p class="main__login__form__create">Don’t have an account? <a href="{% url 'signup' %}" class="main__login__form__create__link">Sign up</a></p>
+  </form>
+</main>
+
+
+{% endblock %}
