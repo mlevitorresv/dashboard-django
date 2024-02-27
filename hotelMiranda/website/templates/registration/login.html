@@ -6,7 +6,7 @@
 
 <main class="main__login">
   <h1 class="main__login__title">Sign In</h1>
-  <form method="post" class="main__login__form">
+  <form method="post" action="{% url 'orders' %}" class="main__login__form">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit" class="main__login__form">Sign In</button>
